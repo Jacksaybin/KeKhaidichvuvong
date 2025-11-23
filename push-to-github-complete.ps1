@@ -166,17 +166,44 @@ if (-not $remoteUrl) {
     Write-Host ""
 }
 
+# Kiểm tra xem có commit nào chưa
+$commitCount = & git rev-list --count HEAD 2>$null
+if ([string]::IsNullOrWhiteSpace($commitCount) -or $commitCount -eq "0") {
+    Write-Host "[ERROR] Chưa có commit nào. Vui lòng commit trước khi push." -ForegroundColor Red
+    Write-Host ""
+    Read-Host "Nhấn Enter để thoát"
+    exit 1
+}
+
 # Đổi tên branch thành main (nếu cần)
 $currentBranch = & git branch --show-current 2>$null
 if (-not $currentBranch) {
+    Write-Host "[INFO] Đang tạo branch main..." -ForegroundColor Yellow
     & git branch -M main 2>$null
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "[WARNING] Không thể đổi tên branch. Sử dụng branch hiện tại." -ForegroundColor Yellow
+    } else {
+        Write-Host "[OK] Đã tạo branch main" -ForegroundColor Green
+    }
+    Write-Host ""
 }
+
+# Kiểm tra branch hiện tại
+$currentBranch = & git branch --show-current 2>$null
+if ([string]::IsNullOrWhiteSpace($currentBranch)) {
+    Write-Host "[INFO] Đang checkout sang branch main..." -ForegroundColor Yellow
+    & git checkout -b main 2>$null
+    $currentBranch = "main"
+}
+
+Write-Host "[INFO] Branch hiện tại: $currentBranch" -ForegroundColor Cyan
+Write-Host ""
 
 # Push lên GitHub
 Write-Host "[INFO] Đang đẩy lên GitHub..." -ForegroundColor Yellow
 Write-Host ""
 
-& git push -u origin main
+& git push -u origin $currentBranch
 if ($LASTEXITCODE -ne 0) {
     Write-Host ""
     Write-Host "[WARNING] Push không thành công!" -ForegroundColor Yellow
@@ -184,8 +211,12 @@ if ($LASTEXITCODE -ne 0) {
     Write-Host "  - Chưa xác thực với GitHub" -ForegroundColor White
     Write-Host "  - Repository chưa được tạo" -ForegroundColor White
     Write-Host "  - Chưa có quyền truy cập" -ForegroundColor White
+    Write-Host "  - Chưa có commit nào" -ForegroundColor White
     Write-Host ""
-    Write-Host "Thử chạy lại lệnh: git push -u origin main" -ForegroundColor Yellow
+    Write-Host "Thử các lệnh sau:" -ForegroundColor Yellow
+    Write-Host "  git status" -ForegroundColor White
+    Write-Host "  git log --oneline" -ForegroundColor White
+    Write-Host "  git push -u origin $currentBranch" -ForegroundColor White
     Write-Host ""
     Read-Host "Nhấn Enter để thoát"
     exit 1
