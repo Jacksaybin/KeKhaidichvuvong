@@ -1,0 +1,35 @@
+========================================
+  HƯỚNG DẪN CHẠY SCRIPT CÀI ĐẶT GIT
+========================================
+
+CÁCH 1: Sử dụng file .bat (Dễ nhất)
+------------------------------------
+1. Mở File Explorer
+2. Đi đến thư mục: D:\Dichvucong-main
+3. Click CHUỘT PHẢI vào file: install-git.bat
+4. Chọn "Run as Administrator"
+5. Làm theo hướng dẫn trên màn hình
+
+CÁCH 2: Sử dụng PowerShell
+------------------------------------
+1. Click CHUỘT PHẢI vào nút Start (hoặc tìm PowerShell)
+2. Chọn "Windows PowerShell (Admin)" hoặc "Terminal (Admin)"
+3. Chạy lệnh sau:
+
+   cd D:\Dichvucong-main
+   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+   .\install-git.ps1
+
+CÁCH 3: Chạy trực tiếp với đường dẫn đầy đủ
+------------------------------------
+1. Mở PowerShell với quyền Administrator
+2. Chạy lệnh:
+
+   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+   & "D:\Dichvucong-main\install-git.ps1"
+
+LƯU Ý QUAN TRỌNG:
+- Phải chạy PowerShell với quyền Administrator
+- Phải ở đúng thư mục D:\Dichvucong-main hoặc dùng đường dẫn đầy đủ
+- Nếu gặp lỗi, thử cách 1 (dùng file .bat)
+
