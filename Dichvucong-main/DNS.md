@@ -1,4 +1,4 @@
-# DNS Configuration - hoantienve365.com
+# DNS Configuration - vib.it.com
 
 | Type | Name | Value | Proxy | TTL |
 |------|------|-------|-------|-----|

@@ -2,30 +2,78 @@
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Admin — Quản Lý Hồ Sơ</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="https://vpcp.dichvucong.gov.vn/p/home/img/header/quoc_huy.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="admin.css">
 </head>
 <body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+    <div class="header-inner">
+        <div class="header-left">
+            <svg width="40" height="40" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="48" fill="none" stroke="#FFC251" stroke-width="2"/>
+                <path d="M 50 12 L 56 35 L 80 35 L 60 48 L 68 72 L 50 58 L 32 72 L 40 48 L 20 35 L 44 35 Z" fill="#FFC251"/>
+                <rect x="22" y="80" width="56" height="14" fill="none" rx="2" stroke="#FFC251" stroke-width="0.8"/>
+                <text x="50" y="91" font-size="8" fill="#FFC251" text-anchor="middle" font-weight="bold">VN</text>
+            </svg>
+            <div>
+                <div class="header-logo-title">CỔNG DỊCH VỤ CÔNG QUỐC GIA</div>
+                <div class="header-logo-sub">Hệ thống quản lý hồ sơ hành chính</div>
+            </div>
+        </div>
+        <div class="header-right">
+            <a href="index.html" class="btn btn-register"><i class="fa-solid fa-house"></i> Về trang chủ</a>
+        </div>
+    </div>
+</header>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav">
+    <div class="nav-inner">
+        <ul class="nav-list">
+            <li class="nav-item nav-item-home">
+                <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i></a>
+            </li>
+            <li class="nav-item">
+                <a href="index.html" class="nav-link"><span>Thông tin và dịch vụ</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="index.html" class="nav-link"><span>Thanh toán trực tuyến</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="index.html" class="nav-link"><span>Phản ánh kiến nghị</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="index.html" class="nav-link"><span>Đánh giá chất lượng phục vụ</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="index.html" class="nav-link"><span>Hỗ trợ</span></a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
 <!-- ===== LOGIN SCREEN ===== -->
 <div id="loginScreen" class="login-wrapper">
     <div class="login-card">
         <div class="login-logo">
             <svg class="emblem" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                <defs><linearGradient id="g" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#CE7A58"/><stop offset="100%" style="stop-color:#B8603A"/></linearGradient></defs>
-                <circle cx="50" cy="50" r="48" fill="url(#g)" stroke="#FFD700" stroke-width="2"/>
-                <path d="M 50 12 L 56 35 L 80 35 L 60 48 L 68 72 L 50 58 L 32 72 L 40 48 L 20 35 L 44 35 Z" fill="#FFD700"/>
-                <rect x="22" y="80" width="56" height="14" fill="#CE7A58" rx="2" stroke="#FFD700" stroke-width="0.5"/>
-                <text x="50" y="90" font-size="7.5" fill="#FFFFFF" text-anchor="middle" font-weight="bold" font-family="Arial">VIỆT NAM</text>
+                <defs><linearGradient id="g" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" style="stop-color:#19217a"/><stop offset="100%" style="stop-color:#0e1748"/></linearGradient></defs>
+                <circle cx="50" cy="50" r="48" fill="url(#g)" stroke="#FFC251" stroke-width="2"/>
+                <path d="M 50 12 L 56 35 L 80 35 L 60 48 L 68 72 L 50 58 L 32 72 L 40 48 L 20 35 L 44 35 Z" fill="#FFC251"/>
+                <rect x="22" y="80" width="56" height="14" fill="url(#g)" rx="2" stroke="#FFC251" stroke-width="0.5"/>
+                <text x="50" y="90" font-size="7.5" fill="#FFC251" text-anchor="middle" font-weight="bold" font-family="Arial">VIỆT NAM</text>
             </svg>
             <h2>HỆ THỐNG QUẢN LÝ<br>HỒ SƠ HÀNH CHÍNH</h2>
             <p>Cổng Dịch Vụ Công Quốc Gia</p>
         </div>
         <div class="login-form">
-            <div id="loginError" class="login-error">⚠️ Tên đăng nhập hoặc mật khẩu không đúng!</div>
+            <div id="loginError" class="login-error">Tên đăng nhập hoặc mật khẩu không đúng!</div>
             <form onsubmit="doLogin(); return false;" autocomplete="on">
                 <div class="form-group">
                     <label>Tên đăng nhập</label>
@@ -35,7 +83,7 @@
                     <label>Mật khẩu</label>
                     <input type="password" id="loginPass" placeholder="Nhập mật khẩu" autocomplete="current-password">
                 </div>
-                <button type="submit" class="btn-login-submit">🔐 Đăng nhập</button>
+                <button type="submit" class="btn-login-submit">Đăng nhập</button>
             </form>
         </div>
     </div>
@@ -47,37 +95,37 @@
     <!-- SIDEBAR -->
     <aside class="sidebar">
         <div class="sidebar-header">
-            <div class="brand">⚙ ADMIN</div>
+            <div class="brand">ADMIN</div>
             <div class="brand-sub">Quản lý hồ sơ</div>
         </div>
         <nav class="sidebar-nav">
             <a href="#" class="active" onclick="showTab('dashboard',this)">
-                <span class="nav-icon">📊</span><span>Tổng quan</span>
+                <span class="nav-icon"><i class="fa-solid fa-chart-simple"></i></span><span>Tổng quan</span>
             </a>
             <a href="#" onclick="showTab('profiles',this)">
-                <span class="nav-icon">📁</span><span>Danh sách hồ sơ</span>
+                <span class="nav-icon"><i class="fa-solid fa-folder-open"></i></span><span>Danh sách hồ sơ</span>
             </a>
             <a href="#" onclick="showTab('qrmanager',this)">
-                <span class="nav-icon">📲</span><span>Quản lý QR thanh toán</span>
+                <span class="nav-icon"><i class="fa-solid fa-qrcode"></i></span><span>Quản lý QR thanh toán</span>
             </a>
             <a href="index.html" target="_blank">
-                <span class="nav-icon">🌐</span><span>Xem trang chủ</span>
+                <span class="nav-icon"><i class="fa-solid fa-globe"></i></span><span>Xem trang chủ</span>
             </a>
         </nav>
         <div class="sidebar-footer">
             <button class="btn-logout" onclick="doLogout()">
-                <span>🚪</span><span>Đăng xuất</span>
+                <i class="fa-solid fa-right-from-bracket"></i><span>Đăng xuất</span>
             </button>
         </div>
     </aside>
 
     <!-- MAIN -->
     <div class="main-content">
-        <div class="top-bar">
+        <div class="admin-topbar">
             <h1 id="pageTitle">Tổng quan hệ thống</h1>
-            <div class="top-bar-right">
-                <span>👤 <strong id="adminName">admin</strong></span>
-                <span class="admin-badge">ADMIN</span>
+            <div class="admin-topbar-right">
+                <span><i class="fa-regular fa-user"></i> <strong id="adminName">admin</strong></span>
+                <span class="admin-badge"><i class="fa-solid fa-shield-halved"></i> ADMIN</span>
             </div>
         </div>
 
@@ -138,7 +186,7 @@
             <div id="tab-profiles" style="display:none;">
                 <div class="section-card">
                     <div class="section-header">
-                        <div class="section-title">📁 Danh sách hồ sơ</div>
+                        <div class="section-title"><i class="fa-solid fa-folder-open"></i> Danh sách hồ sơ</div>
                         <div class="section-actions">
                             <button class="btn btn-outline btn-sm" onclick="exportData()">⬇ Xuất dữ liệu</button>
                             <button class="btn btn-danger btn-sm" onclick="clearAllProfiles()">🗑 Xóa tất cả</button>
@@ -192,7 +240,7 @@
                     <!-- Create QR Form -->
                     <div class="section-card">
                         <div class="section-header">
-                            <div class="section-title">📲 Tạo mã QR thanh toán</div>
+                            <div class="section-title"><i class="fa-solid fa-qrcode"></i> Tạo mã QR thanh toán</div>
                         </div>
                         <div class="modal-body">
                             <div class="qr-form">
@@ -300,7 +348,7 @@
         <div class="modal-body" id="modalDetailBody"></div>
         <div class="modal-footer">
             <button class="btn btn-outline" onclick="closeModal('modalDetail')">Đóng</button>
-            <button class="btn btn-secondary" id="btnGenerateQR" onclick="openQRFromProfile()">📲 Tạo QR thanh toán</button>
+            <button class="btn btn-secondary" id="btnGenerateQR" onclick="openQRFromProfile()"><i class="fa-solid fa-qrcode"></i> Tạo QR thanh toán</button>
             <button class="btn btn-primary" id="btnSaveDetail" onclick="saveProfileDetail()">💾 Lưu thay đổi</button>
         </div>
     </div>

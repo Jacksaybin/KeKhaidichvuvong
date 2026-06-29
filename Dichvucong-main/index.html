@@ -1,554 +1,378 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="Content-Language" content="vi">
-    <title>Cổng Dịch vụ công quốc gia</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Cổng Dịch vụ công Quốc gia</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="https://vpcp.dichvucong.gov.vn/p/home/img/header/quoc_huy.png">
 </head>
-
 <body>
-    <!-- Main Header -->
-    <header class="main-header">
+    <!-- TOP BAR -->
+    <div class="top-bar">
         <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/header/logo.png" alt="Logo Cổng Dịch vụ công quốc gia" class="logo"
-                        onerror="this.onerror=null; this.src='logo.png'; this.onerror=function(){this.style.display='none'; this.nextElementSibling.style.display='flex';};"
-                        onload="this.nextElementSibling.style.display='none';">
-                    <div class="logo-placeholder" id="logoPlaceholder">
-                        <div class="logo-emblem">
-                            <svg width="90" height="90" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <!-- Outer circle with gradient -->
-                                <defs>
-                                    <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#CE7A58;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#B8603A;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <circle cx="50" cy="50" r="48" fill="url(#redGrad)" stroke="#FFD700" stroke-width="2" />
-                                <!-- Star with better shape -->
-                                <path
-                                    d="M 50 12 L 56 35 L 80 35 L 60 48 L 68 72 L 50 58 L 32 72 L 40 48 L 20 35 L 44 35 Z"
-                                    fill="#FFD700" stroke="#FFA500" stroke-width="0.5" />
-                                <!-- Rice stalks - left -->
-                                <path d="M 18 45 Q 12 40, 15 35 Q 18 30, 22 35 Q 20 40, 18 45" fill="#FFD700"
-                                    opacity="0.95" />
-                                <path d="M 15 50 Q 10 45, 13 40 Q 16 35, 20 40 Q 18 45, 15 50" fill="#FFD700"
-                                    opacity="0.9" />
-                                <!-- Rice stalks - right -->
-                                <path d="M 82 45 Q 88 40, 85 35 Q 82 30, 78 35 Q 80 40, 82 45" fill="#FFD700"
-                                    opacity="0.95" />
-                                <path d="M 85 50 Q 90 45, 87 40 Q 84 35, 80 40 Q 82 45, 85 50" fill="#FFD700"
-                                    opacity="0.9" />
-                                <!-- Cogwheel with more detail -->
-                                <circle cx="50" cy="68" r="14" fill="#FFD700" stroke="#FFA500" stroke-width="0.5" />
-                                <circle cx="50" cy="68" r="10" fill="#CE7A58" opacity="0.3" />
-                                <!-- Cogwheel teeth -->
-                                <rect x="48" y="54" width="4" height="10" fill="#CE7A58" rx="1" />
-                                <rect x="48" y="72" width="4" height="10" fill="#CE7A58" rx="1" />
-                                <rect x="60" y="66" width="10" height="4" fill="#CE7A58" rx="1" />
-                                <rect x="30" y="66" width="10" height="4" fill="#CE7A58" rx="1" />
-                                <rect x="56" y="60" width="6" height="4" fill="#CE7A58" rx="1"
-                                    transform="rotate(45 59 62)" />
-                                <rect x="38" y="60" width="6" height="4" fill="#CE7A58" rx="1"
-                                    transform="rotate(-45 41 62)" />
-                                <!-- Banner with text -->
-                                <rect x="22" y="80" width="56" height="14" fill="#CE7A58" rx="2" stroke="#FFD700"
-                                    stroke-width="0.5" />
-                                <text x="50" y="90" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold"
-                                    font-family="Arial, sans-serif">VIỆT NAM</text>
-                            </svg>
-                        </div>
-                        <div class="logo-text-content">
-                            <div class="logo-main-text">CỔNG DỊCH VỤ CÔNG QUỐC GIA</div>
-                            <div class="logo-tagline">Kết nối, cung cấp thông tin và dịch vụ công mọi lúc, mọi nơi</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="header-actions">
-                    <div class="header-auth-buttons">
-                        <a href="#" class="btn-register">Đăng ký</a>
-                        <a href="#" class="btn-login">Đăng nhập</a>
-                    </div>
-                </div>
-                <button class="nav-toggle" id="navToggle" aria-label="Mở/Đóng menu điều hướng" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+            <span><i class="fa-regular fa-phone"></i> Hotline: 18001096</span>
+            <div class="top-bar-links">
+                <a href="#"><i class="fa-regular fa-circle-question"></i> Hỗ trợ</a>
+                <a href="#"><i class="fa-regular fa-envelope"></i> dichvucong@chinhphu.vn</a>
             </div>
+        </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-left">
+                <div class="logo-fallback" id="logoFallback" style="display:flex">
+                    <svg width="40" height="40" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="48" fill="none" stroke="#FFC251" stroke-width="2"/>
+                        <path d="M 50 12 L 56 35 L 80 35 L 60 48 L 68 72 L 50 58 L 32 72 L 40 48 L 20 35 L 44 35 Z" fill="#FFC251"/>
+                        <rect x="22" y="80" width="56" height="14" fill="none" rx="2" stroke="#FFC251" stroke-width="0.8"/>
+                        <text x="50" y="91" font-size="8" fill="#FFC251" text-anchor="middle" font-weight="bold">VN</text>
+                    </svg>
+                    <div>
+                        <div class="header-logo-title">CỔNG DỊCH VỤ CÔNG QUỐC GIA</div>
+                        <div class="header-logo-sub">Kết nối, cung cấp thông tin và dịch vụ công mọi lúc, mọi nơi</div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right">
+                <a href="dang-ky-tai-khoan.html" class="btn btn-register"><i class="fa-regular fa-user"></i> Đăng ký</a>
+                <a href="#" class="btn btn-login"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <i class="fa-solid fa-bars" style="color:#fff;font-size:22px;"></i>
+            </button>
         </div>
     </header>
 
-    <!-- Navigation Menu -->
-    <div class="nav-wrapper">
-        <div class="nav-overlay" id="navOverlay"></div>
-        <nav class="main-nav">
-            <div class="container">
-                <ul class="nav-menu" id="navMenu">
-                    <li class="nav-item nav-item-home">
-                        <a href="#" class="nav-link" title="Trang chủ">
-                            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                            </svg>
-                            <span>Trang chủ</span>
-                        </a>
-                    </li>
-                    <li class="nav-item has-submenu">
-                        <a href="#" class="nav-link">
-                            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                                <path d="M2 17l10 5 10-5"></path>
-                                <path d="M2 12l10 5 10-5"></path>
-                            </svg>
-                            <span>Thông tin và dịch vụ</span>
-                            <svg class="submenu-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </a>
-                        <ul class="submenu">
-                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                        <line x1="8" y1="21" x2="16" y2="21"></line>
-                                        <line x1="12" y1="17" x2="12" y2="21"></line>
-                                    </svg> <strong>Dịch vụ công trực tuyến</strong></a></li>
-                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <circle cx="11" cy="11" r="8"></circle>
-                                        <path d="M21 21l-4.35-4.35"></path>
-                                    </svg> <strong>Tra cứu hồ sơ</strong></a></li>
-                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
-                                    </svg> <strong>Thủ tục hành chính liên thông</strong></a></li>
-                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                        <polyline points="14 2 14 8 20 8"></polyline>
-                                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                                        <circle cx="12" cy="10" r="1"></circle>
-                                    </svg> Quyết định công bố</a></li>
-                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                        <line x1="12" y1="2" x2="12" y2="9"></line>
-                                    </svg> Cơ quan</a></li>
-                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <line x1="12" y1="2" x2="12" y2="22"></line>
-                                        <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg> <strong>Tòa án nhân dân</strong></a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item nav-item-payment">
-                        <a href="#" class="nav-link nav-link-active">
-                            <span>Thanh toán trực tuyến</span>
-                        </a>
-                    </li>
-                    <li class="nav-item has-submenu">
-                        <a href="#" class="nav-link">
-                            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                            </svg>
-                            <span>Phản ánh kiến nghị</span>
-                            <svg class="submenu-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </a>
-                        <ul class="submenu">
-                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <line x1="22" y1="2" x2="11" y2="13"></line>
-                                        <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                                    </svg> <strong>Gửi PAKN</strong></a></li>
-                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <polyline points="9 11 12 14 22 4"></polyline>
-                                        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
-                                    </svg> <strong>Tra cứu kết quả trả lời</strong></a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <polygon
-                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2">
-                                </polygon>
-                            </svg>
-                            <span>Đánh giá chất lượng phục vụ</span>
-                        </a>
-                    </li>
-                    <li class="nav-item has-submenu">
-                        <a href="#" class="nav-link">
-                            <svg class="nav-icon" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <path d="M12 16v-4"></path>
-                                <path d="M12 8h.01"></path>
-                            </svg>
-                            <span>Hỗ trợ</span>
-                            <svg class="submenu-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <polyline points="6 9 12 15 18 9"></polyline>
-                            </svg>
-                        </a>
-                        <ul class="submenu">
-                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                                        <circle cx="12" cy="7" r="4"></circle>
-                                    </svg> <strong>Giới thiệu</strong></a></li>
-                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                                        <polyline points="14 2 14 8 20 8"></polyline>
-                                        <line x1="16" y1="13" x2="8" y2="13"></line>
-                                        <line x1="16" y1="17" x2="8" y2="17"></line>
-                                    </svg> <strong>Điều khoản sử dụng</strong></a></li>
-                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <circle cx="12" cy="12" r="10"></circle>
-                                        <path d="M12 16v-4"></path>
-                                        <path d="M12 8h.01"></path>
-                                    </svg> Hướng dẫn sử dụng</a></li>
-                            <li><a href="#"><svg class="submenu-icon" width="14" height="14" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
-                                        <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
-                                    </svg> <strong>Thông báo</strong></a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+    <!-- NAV OVERLAY (mobile) -->
+    <div class="nav-overlay" id="navOverlay"></div>
 
-    <!-- Search + Featured Services Combined -->
-    <section class="search-featured-section">
+    <!-- NAVIGATION -->
+    <nav class="nav" id="mainNav">
+        <div class="nav-inner">
+            <ul class="nav-list" id="navList">
+                <li class="nav-list-header" id="mobileNavHeader">
+                    <span><i class="fa-solid fa-bars"></i> Menu</span>
+                    <button class="nav-close" id="navClose" aria-label="Đóng menu">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </li>
+                <li class="nav-item nav-item-home">
+                    <a href="#" class="nav-link">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a href="#" class="nav-link">
+                        <span>Thông tin và dịch vụ</span>
+                        <i class="fa-solid fa-chevron-down nav-arrow"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#"><i class="fa-solid fa-display submenu-icon"></i>Dịch vụ công trực tuyến</a></li>
+                        <li><a href="#"><i class="fa-solid fa-magnifying-glass submenu-icon"></i>Tra cứu hồ sơ</a></li>
+                        <li><a href="#"><i class="fa-solid fa-link submenu-icon"></i>Thủ tục hành chính liên thông</a></li>
+                        <li><a href="#"><i class="fa-solid fa-file-lines submenu-icon"></i>Quyết định công bố</a></li>
+                        <li><a href="#"><i class="fa-solid fa-building submenu-icon"></i>Cơ quan</a></li>
+                        <li><a href="#"><i class="fa-solid fa-gavel submenu-icon"></i>Tòa án nhân dân</a></li>
+                        <li><a href="#"><i class="fa-solid fa-question-circle submenu-icon"></i>Câu hỏi thường gặp</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><span>Thanh toán trực tuyến</span></a>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a href="#" class="nav-link">
+                        <span>Phản ánh kiến nghị</span>
+                        <i class="fa-solid fa-chevron-down nav-arrow"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#"><i class="fa-solid fa-paper-plane submenu-icon"></i>Gửi PAKN</a></li>
+                        <li><a href="#"><i class="fa-solid fa-reply submenu-icon"></i>Tra cứu kết quả trả lời</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><span>Đánh giá chất lượng phục vụ</span></a>
+                </li>
+                <li class="nav-item has-submenu">
+                    <a href="#" class="nav-link">
+                        <span>Hỗ trợ</span>
+                        <i class="fa-solid fa-chevron-down nav-arrow"></i>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="#"><i class="fa-solid fa-info-circle submenu-icon"></i>Giới thiệu</a></li>
+                        <li><a href="#"><i class="fa-solid fa-file-contract submenu-icon"></i>Điều khoản sử dụng</a></li>
+                        <li><a href="#"><i class="fa-solid fa-book submenu-icon"></i>Hướng dẫn sử dụng</a></li>
+                        <li><a href="#"><i class="fa-solid fa-bell submenu-icon"></i>Thông báo</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- BANNER -->
+    <section class="banner">
         <div class="container">
-            <div class="search-main-row">
-                <div class="search-input-wrapper">
-                    <input type="text" class="search-input-main" id="searchInputMain"
-                        placeholder="Nhập từ khoá tìm kiếm">
-                </div>
-                <button type="button" class="btn-search-advanced">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <circle cx="11" cy="11" r="8"></circle>
-                        <path d="M21 21l-4.35-4.35"></path>
-                    </svg>
-                    <span>Tìm kiếm nâng cao</span>
-                </button>
-            </div>
-            <div class="search-advanced-panel" id="searchAdvancedPanel" style="display: none;">
-                <div class="search-filters">
-                    <div class="filter-group">
-                        <label>Sở/Ban ngành</label>
-                        <select id="searchDepartment" class="filter-select">
-                            <option value="">-- Chọn Sở/Ban ngành --</option>
-                        </select>
+            <div class="banner-content">
+                <div class="search-row">
+                    <div class="search-box search-box-main">
+                        <i class="fa-solid fa-search search-icon"></i>
+                        <input type="text" class="search-input" placeholder="Nhập từ khóa tìm kiếm">
                     </div>
-                    <div class="filter-group">
-                        <label>Tỉnh/ Thành phố</label>
-                        <select id="searchProvince" class="filter-select">
-                            <option value="">-- Chọn Tỉnh/Thành phố --</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label>Quận/Huyện</label>
-                        <select id="searchDistrict" class="filter-select">
-                            <option value="">-- Chọn Quận/Huyện --</option>
-                        </select>
-                    </div>
-                    <div class="filter-group">
-                        <label>Phường/Xã</label>
-                        <select id="searchWard" class="filter-select">
-                            <option value="">-- Chọn Phường/Xã --</option>
-                        </select>
+                    <div class="search-box search-box-advanced">
+                        <input type="text" class="search-input" placeholder="Tìm kiếm nâng cao">
+                        <i class="fa-solid fa-magnifying-glass search-icon-adv"></i>
                     </div>
                 </div>
-            </div>
-            <div class="featured-services-grid">
-                <a href="dang-ky-thu-tuc-nha-dat.html" class="featured-service-btn" data-action="form"
-                    data-open-form="true" data-service-name="Dịch vụ công trực tuyến"
-                    title="Nhấp để đăng ký thủ tục nhà đất">
-                    <div class="featured-service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
-                    </div>
-                    <div class="featured-service-text">
-                        <div class="featured-service-title">Dịch vụ công trực tuyến</div>
-                    </div>
-                </a>
-                <a href="#" class="featured-service-btn" id="btnDangQR" onclick="openQRModal(event)">
-                    <div class="featured-service-icon" style="position:relative;">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
-                            <path d="M2 17l10 5 10-5"></path>
-                            <path d="M2 12l10 5 10-5"></path>
-                        </svg>
-                        <span id="qrBadge" style="display:none;position:absolute;top:-8px;right:-10px;background:#e74c3c;color:#fff;font-size:10px;font-weight:700;padding:2px 6px;border-radius:10px;line-height:1.4;white-space:nowrap;box-shadow:0 2px 6px rgba(0,0,0,0.25);">📲 QR</span>
-                    </div>
-                    <div class="featured-service-text">
-                        <div class="featured-service-title">Dịch vụ công trực tuyến của Đảng</div>
-                    </div>
-                </a>
-                <a href="#" class="featured-service-btn">
-                    <div class="featured-service-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path
-                                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-                            </path>
-                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                        </svg>
-                    </div>
-                    <div class="featured-service-text">
-                        <div class="featured-service-title">Dịch vụ công liên thông: Khai sinh, Khai tử</div>
-                    </div>
-                </a>
+                <div class="featured-services">
+                    <a href="dang-ky-thu-tuc-nha-dat.html" class="featured-btn">
+                        <i class="fa-solid fa-display"></i>
+                        <span>Dịch vụ công trực tuyến</span>
+                    </a>
+                    <a href="#" class="featured-btn" onclick="openQRModal(event)">
+                        <i class="fa-solid fa-layer-group"></i>
+                        <span>Dịch vụ công liên kết: Ngân hàng, Thuế quan</span>
+                        <span class="qr-badge" id="qrBadge" style="display:none">QR</span>
+                    </a>
+                    <a href="#" class="featured-btn">
+                        <i class="fa-solid fa-arrows-spin"></i>
+                        <span>Dịch vụ công liên thông: Khai sinh, khai tử</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- News Section -->
+    <!-- NEWS SLIDER -->
     <section class="news-section">
         <div class="container">
-            <div class="news-slider-wrapper">
-                <button id="newsPrevBtn" class="news-nav-btn news-nav-prev" aria-label="Trước">&#8249;</button>
-                <div class="news-slider" id="newsSlider">
-                    <div class="news-slide active">
-                        <a href="#" class="news-item">
-                            <p class="news-title">CHUYỂN ĐỔI, VẬN HÀNH CHÍNH THỨC CỔNG DỊCH VỤ CÔNG QUỐC GIA TẠI TRUNG TÂM DỮ LIỆU QUỐC GIA, BỘ CÔNG AN</p>
-                            <span class="news-date">Ngày 29/05/2026</span>
-                        </a>
-                        <a href="#" class="news-item">
-                            <p class="news-title">THÔNG BÁO VỀ VIỆC DỪNG VẬN HÀNH CỔNG DỊCH VỤ CÔNG QUỐC GIA DO VĂN PHÒNG CHÍNH PHỦ QUẢN LÝ</p>
-                            <span class="news-date">Ngày 21/04/2026</span>
-                        </a>
-                        <a href="#" class="news-item">
-                            <p class="news-title">Công bố dữ liệu quốc gia về bảo hiểm và hướng dẫn kết nối, khai thác sử dụng dữ liệu quốc gia về bảo hiểm thay thế giấy tờ trong giải quyết thủ tục hành chính</p>
-                            <span class="news-date">Ngày 11/02/2026</span>
-                        </a>
-                    </div>
-                    <div class="news-slide">
-                        <a href="#" class="news-item">
-                            <p class="news-title">CÔNG BỐ VÀ HƯỚNG DẪN KẾT NỐI ĐỂ KHAI THÁC, SỬ DỤNG DỮ LIỆU THÔNG TIN VỀ GIẤY CHỨNG NHẬN QUYỀN SỬ DỤNG ĐẤT THAY THẾ THÀNH PHẦN HỒ SƠ</p>
-                            <span class="news-date">Ngày 11/02/2026</span>
-                        </a>
-                        <a href="#" class="news-item">
-                            <p class="news-title">CÔNG BỐ DỮ LIỆU, HƯỚNG DẪN KHAI THÁC, SỬ DỤNG DỮ LIỆU SỔ SỨC KHOẺ ĐIỆN TỬ TÍCH HỢP TRÊN VNEID THAY THẾ SỔ GIẤY</p>
-                            <span class="news-date">Ngày 11/02/2026</span>
-                        </a>
-                        <a href="#" class="news-item">
-                            <p class="news-title">CÔNG BỐ DỮ LIỆU VÀ HƯỚNG DẪN KẾT NỐI, KHAI THÁC SỬ DỤNG DỮ LIỆU ĐĂNG KÝ DOANH NGHIỆP, HỢP TÁC XÃ, HỘ KINH DOANH</p>
-                            <span class="news-date">Ngày 11/02/2026</span>
-                        </a>
+            <div class="news-inner">
+                <button class="news-btn news-prev" id="newsPrev">&#8249;</button>
+                <div class="news-track-wrap">
+                    <div class="news-track" id="newsTrack">
+                        <div class="news-page" id="newsPage0">
+                            <a href="#" class="news-item">
+                                <h3>Tạm dừng hoạt động phần mềm Xử lý vi phạm giao thông để nâng cấp</h3>
+                                <span>Ngày 15/08/2025</span>
+                            </a>
+                            <a href="#" class="news-item">
+                                <h3>MOMO miễn phí dịch vụ trung gian thanh toán trên Cổng DVCQG</h3>
+                                <span>Ngày 07/07/2025</span>
+                            </a>
+                            <a href="#" class="news-item">
+                                <h3>Cổng DVCQG đang thử nghiệm mô hình tổ chức chính quyền địa phương 2 cấp</h3>
+                                <span>Ngày 28/06/2025</span>
+                            </a>
+                        </div>
+                        <div class="news-page" id="newsPage1">
+                            <a href="#" class="news-item">
+                                <h3>Hướng dẫn nộp hồ sơ trực tuyến mức độ 4</h3>
+                                <span>Ngày 01/06/2025</span>
+                            </a>
+                            <a href="#" class="news-item">
+                                <h3>Ra mắt cổng thanh toán không tiền mặt</h3>
+                                <span>Ngày 20/05/2025</span>
+                            </a>
+                            <a href="#" class="news-item">
+                                <h3>Tích hợp VNeID trong dịch vụ công</h3>
+                                <span>Ngày 12/05/2025</span>
+                            </a>
+                        </div>
+                        <div class="news-page" id="newsPage2">
+                            <a href="#" class="news-item">
+                                <h3>Triển khai chữ ký số cá nhân</h3>
+                                <span>Ngày 30/04/2025</span>
+                            </a>
+                            <a href="#" class="news-item">
+                                <h3>Nâng cấp hệ thống một cửa điện tử</h3>
+                                <span>Ngày 18/04/2025</span>
+                            </a>
+                            <a href="#" class="news-item">
+                                <h3>Thử nghiệm tiếp nhận hồ sơ 24/7</h3>
+                                <span>Ngày 05/04/2025</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <button id="newsNextBtn" class="news-nav-btn news-nav-next" aria-label="Tiếp">&#8250;</button>
+                <button class="news-btn news-next" id="newsNext">&#8250;</button>
             </div>
             <div class="news-dots" id="newsDots">
-                <span class="news-dot active" data-index="0"></span>
-                <span class="news-dot" data-index="1"></span>
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
             </div>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <main class="main-content">
+    <!-- SERVICE CATEGORIES -->
+    <section class="categories">
         <div class="container">
-            <!-- Service Categories -->
-            <div class="service-categories">
-                <div class="category-section">
-                    <h2 class="category-title"><a href="#">CÔNG DÂN</a></h2>
-                    <div class="category-links">
-                        <a href="#" class="category-link">
-                            <span class="category-icon-box"><img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/congdan/cocon.svg" alt="" class="category-img-icon"></span>
-                            <span class="category-link-text">Có con nhỏ</span>
+            <div class="categories-row">
+                <div class="cat-col">
+                    <div class="cat-header cat-header-citizen">
+                        <i class="fa-solid fa-users"></i>
+                        <span>CÔNG DÂN</span>
+                    </div>
+                    <div class="cat-links">
+                        <a href="#" class="cat-link cat-link-citizen">
+                            <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/congdan/cocon.svg" alt="" class="cat-icon">
+                            <span>Có con nhỏ</span>
                         </a>
-                        <a href="#" class="category-link">
-                            <span class="category-icon-box"><img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/congdan/giaoduc.svg" alt="" class="category-img-icon"></span>
-                            <span class="category-link-text">Học tập</span>
+                        <a href="#" class="cat-link cat-link-citizen">
+                            <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/congdan/giaoduc.svg" alt="" class="cat-icon">
+                            <span>Học tập</span>
                         </a>
-                        <a href="#" class="category-link">
-                            <span class="category-icon-box"><img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/congdan/vieclam.svg" alt="" class="category-img-icon"></span>
-                            <span class="category-link-text">Việc làm</span>
+                        <a href="#" class="cat-link cat-link-citizen">
+                            <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/congdan/vieclam.svg" alt="" class="cat-icon">
+                            <span>Việc làm</span>
                         </a>
-                        <a href="#" class="category-link">
-                            <span class="category-icon-box"><img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/congdan/cutru.svg" alt="" class="category-img-icon"></span>
-                            <span class="category-link-text">Cư trú và giấy tờ tùy thân</span>
+                        <a href="#" class="cat-link cat-link-citizen">
+                            <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/congdan/cutru.svg" alt="" class="cat-icon">
+                            <span>Cư trú và giấy tờ tùy thân</span>
                         </a>
-                        <a href="#" class="category-link">
-                            <span class="category-icon-box"><img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/congdan/honnhan.svg" alt="" class="category-img-icon"></span>
-                            <span class="category-link-text">Hôn nhân và gia đình</span>
+                        <a href="#" class="cat-link cat-link-citizen">
+                            <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/congdan/honnhan.svg" alt="" class="cat-icon">
+                            <span>Hôn nhân và gia đình</span>
                         </a>
-                        <a href="#" class="category-link">
-                            <span class="category-icon-box"><img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/congdan/nhao.svg" alt="" class="category-img-icon"></span>
-                            <span class="category-link-text">Điện lực, nhà ở, đất đai</span>
+                        <a href="#" class="cat-link cat-link-citizen">
+                            <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/congdan/nhao.svg" alt="" class="cat-icon">
+                            <span>Điện lực, nhà ở, đất đai</span>
                         </a>
-                        <a href="#" class="category-link">
-                            <span class="category-icon-box"><img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/congdan/suckhoe.svg" alt="" class="category-img-icon"></span>
-                            <span class="category-link-text">Sức khỏe và y tế</span>
+                        <a href="#" class="cat-link cat-link-citizen">
+                            <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/congdan/suckhoe.svg" alt="" class="cat-icon">
+                            <span>Sức khỏe và y tế</span>
                         </a>
-                        <a href="#" class="category-link" onclick="openCCCDScanner(event)">
-                            <span class="category-icon-box">
-                                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="category-img-icon">
-                                    <!-- Card body — nâu ấm đồng bộ dự án -->
-                                    <rect x="2" y="11" width="44" height="27" rx="4" fill="rgba(206,122,88,0.10)" stroke="#CE7A58" stroke-width="2"/>
-                                    <!-- Chip vàng -->
-                                    <rect x="7" y="18" width="11" height="8" rx="1.5" fill="rgba(212,160,23,0.88)" stroke="#C9960A" stroke-width="1"/>
-                                    <line x1="10" y1="18" x2="10" y2="26" stroke="#C9960A" stroke-width="0.8"/>
-                                    <line x1="13" y1="18" x2="13" y2="26" stroke="#C9960A" stroke-width="0.8"/>
-                                    <line x1="7" y1="21" x2="18" y2="21" stroke="#C9960A" stroke-width="0.8"/>
-                                    <line x1="7" y1="24" x2="18" y2="24" stroke="#C9960A" stroke-width="0.8"/>
-                                    <!-- Sóng NFC — nâu ấm -->
-                                    <path d="M25 22 Q27.5 24.5 25 27" stroke="#CE7A58" stroke-width="2" fill="none" stroke-linecap="round"/>
-                                    <path d="M28 19 Q32 24.5 28 30" stroke="#CE7A58" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.75"/>
-                                    <path d="M31 16 Q37 24.5 31 33" stroke="#CE7A58" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.45"/>
-                                    <!-- Đường kẻ nội dung thẻ -->
-                                    <rect x="7" y="29" width="14" height="2" rx="1" fill="rgba(206,122,88,0.35)"/>
-                                    <rect x="7" y="33" width="10" height="2" rx="1" fill="rgba(206,122,88,0.22)"/>
-                                    <!-- Chip contact dot -->
-                                    <circle cx="41" cy="15" r="1.5" fill="#CE7A58" opacity="0.5"/>
-                                </svg>
-                            </span>
-                            <span class="category-link-text">Quét CCCD gắn Chip</span>
+                        <a href="#" class="cat-link cat-link-citizen" onclick="openCCCDScanner(event)">
+                            <svg viewBox="0 0 48 48" class="cat-icon-svg">
+                                <rect x="2" y="11" width="44" height="27" rx="4" fill="rgba(206,122,88,0.10)" stroke="#CE7A58" stroke-width="2"/>
+                                <rect x="7" y="18" width="11" height="8" rx="1.5" fill="rgba(255,194,81,0.88)" stroke="#E8A830" stroke-width="1"/>
+                                <path d="M25 22 Q27.5 24.5 25 27" stroke="#CE7A58" stroke-width="2" fill="none" stroke-linecap="round"/>
+                                <path d="M28 19 Q32 24.5 28 30" stroke="#CE7A58" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.75"/>
+                                <path d="M31 16 Q37 24.5 31 33" stroke="#CE7A58" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.45"/>
+                            </svg>
+                            <span>Quét CCCD gắn Chip</span>
                         </a>
-                        <a href="#" class="category-link">
-                            <span class="category-icon-box"><img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/congdan/huutri.svg" alt="" class="category-img-icon"></span>
-                            <span class="category-link-text">Hưu trí</span>
+                        <a href="#" class="cat-link cat-link-citizen">
+                            <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/congdan/huutri.svg" alt="" class="cat-icon">
+                            <span>Hưu trí</span>
                         </a>
-                        <a href="#" class="category-link">
-                            <span class="category-icon-box"><img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/congdan/quadoi.svg" alt="" class="category-img-icon"></span>
-                            <span class="category-link-text">Người thân qua đời</span>
+                        <a href="#" class="cat-link cat-link-citizen">
+                            <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/congdan/quadoi.svg" alt="" class="cat-icon">
+                            <span>Người thân qua đời</span>
                         </a>
-                        <a href="#" class="category-link">
-                            <span class="category-icon-box"><img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/congdan/balance.svg" alt="" class="category-img-icon"></span>
-                            <span class="category-link-text">Giải quyết khiếu kiện</span>
+                        <a href="#" class="cat-link cat-link-citizen">
+                            <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/congdan/balance.svg" alt="" class="cat-icon">
+                            <span>Giải quyết khiếu kiện</span>
                         </a>
                     </div>
                 </div>
-                <div class="category-section category-section-business">
-                    <h2 class="category-title"><a href="#">DOANH NGHIỆP</a></h2>
-                    <div class="category-links">
-                        <a href="#" class="category-link">
-                            <span class="category-icon-box business-icon"><img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/khoisukinhdoanh.svg" alt="" class="category-img-icon"></span>
-                            <span class="category-link-text">Khởi sự kinh doanh</span>
+                <div class="cat-col">
+                    <div class="cat-header cat-header-business">
+                        <i class="fa-solid fa-building"></i>
+                        <span>DOANH NGHIỆP</span>
+                    </div>
+                    <div class="cat-links">
+                        <a href="#" class="cat-link cat-link-business">
+                            <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/khoisukinhdoanh.svg" alt="" class="cat-icon">
+                            <span>Khởi sự kinh doanh</span>
                         </a>
-                        <a href="#" class="category-link">
-                            <span class="category-icon-box business-icon"><img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/laodong.svg" alt="" class="category-img-icon"></span>
-                            <span class="category-link-text">Lao động và bảo hiểm xã hội</span>
+                        <a href="#" class="cat-link cat-link-business">
+                            <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/laodong.svg" alt="" class="cat-icon">
+                            <span>Lao động và bảo hiểm xã hội</span>
                         </a>
-                        <a href="#" class="category-link">
-                            <span class="category-icon-box business-icon"><img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/taichinhdn.svg" alt="" class="category-img-icon"></span>
-                            <span class="category-link-text">Tài chính doanh nghiệp</span>
+                        <a href="#" class="cat-link cat-link-business">
+                            <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/taichinhdn.svg" alt="" class="cat-icon">
+                            <span>Tài chính doanh nghiệp</span>
                         </a>
-                        <a href="#" class="category-link">
-                            <span class="category-icon-box business-icon"><img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/datdai.svg" alt="" class="category-img-icon"></span>
-                            <span class="category-link-text">Điện lực, đất đai, xây dựng</span>
+                        <a href="#" class="cat-link cat-link-business">
+                            <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/datdai.svg" alt="" class="cat-icon">
+                            <span>Điện lực, đất đai, xây dựng</span>
                         </a>
-                        <a href="#" class="category-link">
-                            <span class="category-icon-box business-icon"><img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/thuongmai.svg" alt="" class="category-img-icon"></span>
-                            <span class="category-link-text">Thương mại, quảng cáo</span>
+                        <a href="#" class="cat-link cat-link-business">
+                            <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/thuongmai.svg" alt="" class="cat-icon">
+                            <span>Thương mại, quảng cáo</span>
                         </a>
-                        <a href="#" class="category-link">
-                            <span class="category-icon-box business-icon"><img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/sohuutritue.svg" alt="" class="category-img-icon"></span>
-                            <span class="category-link-text">Sở hữu trí tuệ, đăng ký tài sản</span>
+                        <a href="#" class="cat-link cat-link-business">
+                            <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/sohuutritue.svg" alt="" class="cat-icon">
+                            <span>Sở hữu trí tuệ, đăng ký tài sản</span>
                         </a>
-                        <a href="#" class="category-link">
-                            <span class="category-icon-box business-icon"><img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/tlcn.svg" alt="" class="category-img-icon"></span>
-                            <span class="category-link-text">Thành lập chi nhánh, văn phòng đại diện</span>
+                        <a href="#" class="cat-link cat-link-business">
+                            <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/tlcn.svg" alt="" class="cat-icon">
+                            <span>Thành lập chi nhánh, văn phòng đại diện</span>
                         </a>
-                        <a href="#" class="category-link">
-                            <span class="category-icon-box business-icon"><img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/dauthau.svg" alt="" class="category-img-icon"></span>
-                            <span class="category-link-text">Đấu thầu, mua sắm công</span>
+                        <a href="#" class="cat-link cat-link-business">
+                            <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/dauthau.svg" alt="" class="cat-icon">
+                            <span>Đấu thầu, mua sắm công</span>
                         </a>
-                        <a href="#" class="category-link">
-                            <span class="category-icon-box business-icon"><img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/taicautrucdn.svg" alt="" class="category-img-icon"></span>
-                            <span class="category-link-text">Tái cấu trúc doanh nghiệp</span>
+                        <a href="#" class="cat-link cat-link-business">
+                            <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/taicautrucdn.svg" alt="" class="cat-icon">
+                            <span>Tái cấu trúc doanh nghiệp</span>
                         </a>
-                        <a href="#" class="category-link">
-                            <span class="category-icon-box business-icon"><img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/balance.svg" alt="" class="category-img-icon"></span>
-                            <span class="category-link-text">Giải quyết tranh chấp hợp đồng</span>
+                        <a href="#" class="cat-link cat-link-business">
+                            <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/balance.svg" alt="" class="cat-icon">
+                            <span>Giải quyết tranh chấp hợp đồng</span>
                         </a>
-                        <a href="#" class="category-link">
-                            <span class="category-icon-box business-icon"><img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/tamdung.svg" alt="" class="category-img-icon"></span>
-                            <span class="category-link-text">Tạm dừng, chấm dứt hoạt động</span>
+                        <a href="#" class="cat-link cat-link-business">
+                            <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/home/doanhnghiep/tamdung.svg" alt="" class="cat-icon">
+                            <span>Tạm dừng, chấm dứt hoạt động</span>
                         </a>
                     </div>
                 </div>
             </div>
-
         </div>
-    </main>
+    </section>
 
-    <!-- Footer -->
-    <footer class="main-footer">
+    <!-- FOOTER -->
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <p><strong>Cơ quan chủ quản:</strong> Văn phòng Chính phủ</p>
-                    <p><strong>hoantienve365.com</strong></p>
-                    <p><strong>Tổng đài hỗ trợ:</strong> 18001096</p>
-                    <p><strong>Email:</strong> dichvucong@chinhphu.vn</p>
-                    <a href="admin.html" class="admin-footer-link">⚙ Quản trị hệ thống</a>
+            <div class="footer-inner">
+                <div class="footer-col">
+                    <p><strong>Cơ quan chủ quản:</strong> Ủy ban nhân dân thành phố Hà Nội</p>
+                    <p><i class="fa-regular fa-location-dot"></i> Số 79 Đinh Tiên Hoàng, phường Lý Thái Tổ, quận Hoàn Kiếm, TP Hà Nội</p>
                 </div>
+                <div class="footer-col">
+                    <p><strong>vib.it.com</strong></p>
+                    <p><i class="fa-regular fa-phone"></i> <strong>Tổng đài hỗ trợ:</strong> 18001096</p>
+                    <p><i class="fa-regular fa-envelope"></i> <strong>Email:</strong> dichvucong@chinhphu.vn</p>
+                    <div class="footer-links">
+                        <a href="#"><i class="fa-regular fa-circle-question"></i> Hỏi đáp</a>
+                        <a href="#"><i class="fa-regular fa-file-lines"></i> Chính sách bảo mật</a>
+                        <a href="#"><i class="fa-regular fa-book"></i> Hướng dẫn</a>
+                    </div>
+                    <a href="admin.html" class="footer-admin">Quản trị hệ thống</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Cổng Dịch vụ công Quốc gia. Tất cả quyền được bảo lưu.
             </div>
         </div>
     </footer>
 
     <div id="notification" class="notification"></div>
 
-    <!-- ===== CCCD SCANNER FULLSCREEN ===== -->
+    <!-- CCCD SCANNER MODAL -->
     <div id="cccdModal" class="cccd-fs-overlay">
-
-        <!-- Top bar -->
         <div class="cccd-fs-topbar">
             <div class="cccd-fs-topbar-left">
                 <svg width="22" height="22" viewBox="0 0 48 48" fill="none">
                     <rect x="2" y="10" width="44" height="28" rx="5" fill="rgba(255,255,255,0.95)"/>
-                    <rect x="7" y="17" width="11" height="8" rx="1.5" fill="#FFD600"/>
-                    <line x1="10" y1="17" x2="10" y2="25" stroke="#c8a000" stroke-width=".9"/>
-                    <line x1="13" y1="17" x2="13" y2="25" stroke="#c8a000" stroke-width=".9"/>
-                    <line x1="7" y1="20" x2="18" y2="20" stroke="#c8a000" stroke-width=".9"/>
-                    <line x1="7" y1="23" x2="18" y2="23" stroke="#c8a000" stroke-width=".9"/>
-                    <path d="M30 72 Q34 77 30 82" stroke="rgba(206,122,88,0.5)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                    <rect x="7" y="17" width="11" height="8" rx="1.5" fill="#FFC251"/>
+                    <line x1="10" y1="17" x2="10" y2="25" stroke="#E8A830" stroke-width=".9"/>
+                    <line x1="13" y1="17" x2="13" y2="25" stroke="#E8A830" stroke-width=".9"/>
+                    <line x1="7" y1="20" x2="18" y2="20" stroke="#E8A830" stroke-width=".9"/>
+                    <line x1="7" y1="23" x2="18" y2="23" stroke="#E8A830" stroke-width=".9"/>
                 </svg>
                 <span>Quét CCCD gắn Chip</span>
                 <span class="cccd-fs-topbar-badge">NFC</span>
             </div>
             <div class="cccd-fs-topbar-right">
                 <div class="cccd-fs-timer" id="cccdCountdown" style="display:none">50</div>
-                <button class="cccd-fs-close" onclick="closeCCCDScanner()" title="Đóng">✕</button>
+                <button class="cccd-fs-close" onclick="closeCCCDScanner()">✕</button>
             </div>
         </div>
-
-        <!-- ══ PHASE 0: SẴN SÀNG ══ -->
         <div class="cccd-phase" id="cccdPhaseReady">
             <p class="cccd-fs-guide">Đặt thẻ CCCD gắn chip theo chiều dọc vào khung bên dưới</p>
             <div class="cccd-fs-frame cccd-frame-idle">
@@ -557,48 +381,29 @@
                 <span class="cccd-corner bl"></span>
                 <span class="cccd-corner br"></span>
                 <div class="cccd-card-ghost">
-                    <svg viewBox="0 0 160 252" fill="none" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%">
-                        <rect x="2" y="2" width="156" height="248" rx="10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1.5" stroke-dasharray="6 4"/>
-                        <rect x="2" y="2" width="156" height="52" rx="10" fill="rgba(206,122,88,0.2)"/>
-                        <rect x="2" y="38" width="156" height="16" fill="rgba(206,122,88,0.18)"/>
-                        <circle cx="80" cy="22" r="14" fill="none" stroke="rgba(255,214,0,0.3)" stroke-width="1.2"/>
-                        <path d="M80 10 L82.4 17.6 L90.5 17.6 L84.1 22.4 L86.5 30 L80 25.2 L73.5 30 L75.9 22.4 L69.5 17.6 L77.6 17.6 Z" fill="rgba(255,214,0,0.25)"/>
-                        <rect x="20" y="42" width="120" height="4" rx="2" fill="rgba(255,255,255,0.18)"/>
-                        <rect x="30" y="50" width="100" height="3.5" rx="1.5" fill="rgba(255,255,255,0.12)"/>
-                        <rect x="12" y="64" width="52" height="68" rx="4" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
-                        <circle cx="38" cy="86" r="12" fill="rgba(255,255,255,0.1)"/>
-                        <ellipse cx="38" cy="110" rx="18" ry="12" fill="rgba(255,255,255,0.07)"/>
-                        <rect x="74" y="64" width="26" height="18" rx="3" fill="rgba(255,214,0,0.18)" stroke="rgba(255,214,0,0.3)" stroke-width="1"/>
-                        <line x1="80" y1="64" x2="80" y2="82" stroke="rgba(255,214,0,0.18)" stroke-width="0.8"/>
-                        <line x1="86" y1="64" x2="86" y2="82" stroke="rgba(255,214,0,0.18)" stroke-width="0.8"/>
-                        <line x1="92" y1="64" x2="92" y2="82" stroke="rgba(255,214,0,0.18)" stroke-width="0.8"/>
-                        <line x1="74" y1="70" x2="100" y2="70" stroke="rgba(255,214,0,0.18)" stroke-width="0.8"/>
-                        <line x1="74" y1="76" x2="100" y2="76" stroke="rgba(255,214,0,0.18)" stroke-width="0.8"/>
-                        <path d="M108 72 Q112 77 108 82" stroke="rgba(206,122,88,0.38)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                        <path d="M113 68 Q119 77 113 86" stroke="rgba(206,122,88,0.28)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                        <path d="M118 64 Q126 77 118 90" stroke="rgba(206,122,88,0.18)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-                        <rect x="74" y="88" width="70" height="5" rx="2" fill="rgba(255,255,255,0.13)"/>
-                        <rect x="74" y="98" width="55" height="4" rx="2" fill="rgba(255,255,255,0.08)"/>
-                        <rect x="74" y="108" width="62" height="4" rx="2" fill="rgba(255,255,255,0.08)"/>
-                        <line x1="12" y1="140" x2="148" y2="140" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
-                        <rect x="12" y="148" width="136" height="5" rx="2" fill="rgba(255,255,255,0.09)"/>
-                        <rect x="12" y="160" width="100" height="4" rx="2" fill="rgba(255,255,255,0.07)"/>
-                        <rect x="12" y="171" width="118" height="4" rx="2" fill="rgba(255,255,255,0.06)"/>
-                        <rect x="12" y="182" width="90" height="4" rx="2" fill="rgba(255,255,255,0.06)"/>
-                        <rect x="12" y="220" width="136" height="5" rx="1" fill="rgba(255,255,255,0.07)"/>
-                        <rect x="12" y="230" width="136" height="5" rx="1" fill="rgba(255,255,255,0.06)"/>
-                        <rect x="12" y="240" width="136" height="5" rx="1" fill="rgba(255,255,255,0.05)"/>
+                    <svg viewBox="0 0 160 252" width="100%" height="100%">
+                        <rect x="2" y="2" width="156" height="248" rx="10" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1.5" stroke-dasharray="6 4"/>
+                        <rect x="2" y="2" width="156" height="52" rx="10" fill="rgba(206,122,88,0.15)"/>
+                        <rect x="2" y="38" width="156" height="16" fill="rgba(206,122,88,0.12)"/>
+                        <circle cx="80" cy="22" r="14" fill="none" stroke="rgba(255,194,81,0.25)" stroke-width="1.2"/>
+                        <path d="M80 10 L82.4 17.6 L90.5 17.6 L84.1 22.4 L86.5 30 L80 25.2 L73.5 30 L75.9 22.4 L69.5 17.6 L77.6 17.6 Z" fill="rgba(255,194,81,0.2)"/>
+                        <rect x="20" y="42" width="120" height="4" rx="2" fill="rgba(255,255,255,0.14)"/>
+                        <rect x="12" y="64" width="52" height="68" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                        <circle cx="38" cy="86" r="12" fill="rgba(255,255,255,0.08)"/>
+                        <rect x="74" y="64" width="26" height="18" rx="3" fill="rgba(255,194,81,0.14)" stroke="rgba(255,194,81,0.25)" stroke-width="1"/>
+                        <path d="M108 72 Q112 77 108 82" stroke="rgba(206,122,88,0.3)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+                        <rect x="74" y="88" width="70" height="5" rx="2" fill="rgba(255,255,255,0.1)"/>
+                        <rect x="12" y="148" width="136" height="5" rx="2" fill="rgba(255,255,255,0.07)"/>
+                        <rect x="12" y="220" width="136" height="5" rx="1" fill="rgba(255,255,255,0.05)"/>
                     </svg>
                 </div>
             </div>
-            <p style="font-size:11.5px;color:rgba(255,255,255,0.3);margin:0;text-align:center;">Đảm bảo mặt trước thẻ hướng về phía màn hình</p>
+            <p style="font-size:11.5px;color:rgba(255,255,255,0.25);margin:0;text-align:center;">Đảm bảo mặt trước thẻ hướng về phía màn hình</p>
             <button class="cccd-btn-start" onclick="cccdStartScan()">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2V9M9 21H5a2 2 0 0 1-2-2V9m0 0h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <i class="fa-solid fa-qrcode"></i>
                 Bắt đầu đọc chip
             </button>
         </div>
-
-        <!-- ══ PHASE 1: ĐANG QUÉT ══ -->
         <div class="cccd-phase" id="cccdPhaseScanning" style="display:none">
             <p class="cccd-fs-guide" id="cccdGuideText">Giữ yên thẻ — đang khởi động đầu đọc NFC...</p>
             <div id="cccdChipBanner" class="cccd-chip-banner"></div>
@@ -610,11 +415,9 @@
                 <div class="cccd-scanline" id="cccdScanLine"></div>
                 <div class="cccd-prog-ring-wrap" id="cccdProgRing">
                     <svg width="56" height="56" viewBox="0 0 56 56">
-                        <circle cx="28" cy="28" r="24" fill="rgba(0,0,0,0.6)" stroke="rgba(255,255,255,0.08)" stroke-width="3"/>
-                        <circle cx="28" cy="28" r="24" fill="none" stroke="#CE7A58" stroke-width="3"
-                            stroke-linecap="round" stroke-dasharray="150.8" stroke-dashoffset="150.8"
-                            id="cccdRingPath" style="transform:rotate(-90deg);transform-origin:28px 28px;transition:stroke-dashoffset 1s linear,stroke 0.5s;"/>
-                        <text x="28" y="33" text-anchor="middle" fill="#fff" font-size="11" font-weight="700" font-family="Arial" id="cccdRingLabel">30</text>
+                        <circle cx="28" cy="28" r="24" fill="rgba(0,0,0,0.6)" stroke="rgba(255,255,255,0.06)" stroke-width="3"/>
+                        <circle cx="28" cy="28" r="24" fill="none" stroke="#CE7A58" stroke-width="3" stroke-linecap="round" stroke-dasharray="150.8" stroke-dashoffset="150.8" id="cccdRingPath" style="transform:rotate(-90deg);transform-origin:28px 28px;transition:stroke-dashoffset 1s linear,stroke 0.5s;"/>
+                        <text x="28" y="33" text-anchor="middle" fill="#fff" font-size="11" font-weight="700" id="cccdRingLabel">30</text>
                     </svg>
                 </div>
             </div>
@@ -628,59 +431,28 @@
                     </div>
                     <p class="cccd-fs-status" id="cccdScanStatus">Đang tìm chip NFC...</p>
                 </div>
-                <div class="cccd-fs-dots">
-                    <span class="cccd-dot d1"></span>
-                    <span class="cccd-dot d2"></span>
-                    <span class="cccd-dot d3"></span>
-                </div>
                 <div class="cccd-steps" id="cccdSteps">
-                    <div class="cccd-step" id="cccdStep0">
-                        <div class="cccd-step-icon">◌</div>
-                        <span>Tìm tín hiệu NFC</span>
-                    </div>
-                    <div class="cccd-step" id="cccdStep1">
-                        <div class="cccd-step-icon">◌</div>
-                        <span>Kết nối chip CCCD</span>
-                    </div>
-                    <div class="cccd-step" id="cccdStep2">
-                        <div class="cccd-step-icon">◌</div>
-                        <span>Đọc dữ liệu hộ chiếu số</span>
-                    </div>
-                    <div class="cccd-step" id="cccdStep3">
-                        <div class="cccd-step-icon">◌</div>
-                        <span>Xác thực chữ ký số</span>
-                    </div>
-                    <div class="cccd-step" id="cccdStep4">
-                        <div class="cccd-step-icon">◌</div>
-                        <span>Đọc dữ liệu sinh trắc học</span>
-                    </div>
-                    <div class="cccd-step" id="cccdStep5">
-                        <div class="cccd-step-icon">◌</div>
-                        <span>Kiểm tra CSDL Quốc gia</span>
-                    </div>
+                    <div class="cccd-step" id="cccdStep0"><div class="cccd-step-icon">◌</div><span>Tìm tín hiệu NFC</span></div>
+                    <div class="cccd-step" id="cccdStep1"><div class="cccd-step-icon">◌</div><span>Kết nối chip CCCD</span></div>
+                    <div class="cccd-step" id="cccdStep2"><div class="cccd-step-icon">◌</div><span>Đọc dữ liệu hộ chiếu số</span></div>
+                    <div class="cccd-step" id="cccdStep3"><div class="cccd-step-icon">◌</div><span>Xác thực chữ ký số</span></div>
+                    <div class="cccd-step" id="cccdStep4"><div class="cccd-step-icon">◌</div><span>Đọc dữ liệu sinh trắc học</span></div>
+                    <div class="cccd-step" id="cccdStep5"><div class="cccd-step-icon">◌</div><span>Kiểm tra CSDL Quốc gia</span></div>
                 </div>
             </div>
         </div>
-
-        <!-- ══ PHASE 2: KẾT QUẢ ══ -->
         <div class="cccd-phase" id="cccdPhaseResult" style="display:none">
             <div class="cccd-result-wrap">
-                <!-- Header success -->
                 <div class="cccd-result-header">
                     <div class="cccd-result-check">
-                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
-                            <circle cx="20" cy="20" r="18" stroke="#4cde80" stroke-width="2.5" fill="rgba(76,222,128,0.1)"/>
-                            <path d="M11 20 L17 27 L29 13" stroke="#4cde80" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <svg width="40" height="40" viewBox="0 0 40 40"><circle cx="20" cy="20" r="18" stroke="#4cde80" stroke-width="2.5" fill="rgba(76,222,128,0.1)"/><path d="M11 20 L17 27 L29 13" stroke="#4cde80" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
                     </div>
                     <div>
                         <p class="cccd-result-title">Xác thực chip thành công</p>
                         <p class="cccd-result-subtitle">CCCD gắn chip — Dữ liệu đã được mã hóa & xác thực</p>
                     </div>
                 </div>
-                <!-- Info fields -->
                 <div class="cccd-result-body" id="cccdResultBody"></div>
-                <!-- Footer note -->
                 <div class="cccd-result-footer">
                     <p class="cccd-result-note" id="cccdResultNote">Tự động đóng sau</p>
                     <span class="cccd-result-countdown" id="cccdResultCountdown">8s</span>
@@ -689,528 +461,54 @@
         </div>
     </div>
 
-    <!-- QR Payment Modal -->
-    <div id="qrPaymentModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);z-index:9999;align-items:center;justify-content:center;padding:20px;">
-        <div style="background:#fff;border-radius:16px;width:100%;max-width:540px;max-height:92vh;overflow-y:auto;box-shadow:0 24px 64px rgba(0,0,0,0.35);animation:qrFadeIn .25s ease;">
+    <!-- QR PAYMENT MODAL -->
+    <div id="qrPaymentModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.55);z-index:9999;align-items:center;justify-content:center;padding:20px;">
+        <div style="background:#fff;border-radius:16px;width:100%;max-width:540px;max-height:92vh;overflow-y:auto;box-shadow:0 24px 64px rgba(0,0,0,0.3);animation:qrFadeIn .25s ease;">
             <div style="padding:18px 22px;border-bottom:1px solid #f0f0f0;display:flex;align-items:center;justify-content:space-between;background:linear-gradient(135deg,#CE7A58,#B8603A);border-radius:16px 16px 0 0;">
                 <div style="color:#fff;">
-                    <div style="font-size:16px;font-weight:800;letter-spacing:0.3px;">📲 Thanh toán phí dịch vụ</div>
+                    <div style="font-size:16px;font-weight:800;letter-spacing:0.3px;">Thanh toán phí dịch vụ</div>
                     <div id="qrModalSubtitle" style="font-size:12px;opacity:0.85;margin-top:2px;"></div>
                 </div>
-                <button onclick="closeQRModal()" style="background:rgba(255,255,255,0.2);border:none;color:#fff;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:18px;line-height:1;display:flex;align-items:center;justify-content:center;">✕</button>
+                <button onclick="closeQRModal()" style="background:rgba(255,255,255,0.15);border:none;color:#fff;width:34px;height:34px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;">✕</button>
             </div>
             <div style="padding:24px;display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start;justify-content:center;">
                 <div style="flex-shrink:0;text-align:center;">
-                    <div style="border:4px solid #CE7A58;border-radius:14px;padding:6px;background:#fff;box-shadow:0 6px 20px rgba(206,122,88,0.18);display:inline-block;">
+                    <div style="border:4px solid #CE7A58;border-radius:14px;padding:6px;background:#fff;box-shadow:0 6px 20px rgba(206,122,88,0.15);display:inline-block;">
                         <img id="qrModalImg" src="" alt="QR Thanh toán" style="width:190px;height:190px;display:block;border-radius:8px;">
                     </div>
-                    <p style="font-size:12px;color:#aaa;margin-top:10px;">📱 Quét bằng app ngân hàng</p>
+                    <p style="font-size:12px;color:#aaa;margin-top:10px;">Quét bằng app ngân hàng</p>
                 </div>
                 <div style="flex:1;min-width:220px;">
                     <h3 id="qrModalTitle" style="font-size:15px;font-weight:800;color:#CE7A58;margin-bottom:14px;"></h3>
                     <div style="display:flex;flex-direction:column;gap:10px;font-size:13.5px;">
-                        <div style="display:flex;gap:8px;"><span style="color:#999;font-weight:600;min-width:130px;white-space:nowrap;">🏦 Ngân hàng:</span><span id="qrModalBank" style="color:#1E2F41;font-weight:700;"></span></div>
-                        <div style="display:flex;gap:8px;"><span style="color:#999;font-weight:600;min-width:130px;white-space:nowrap;">💳 Số tài khoản:</span><span id="qrModalAccount" style="color:#1E2F41;font-weight:700;font-family:monospace;font-size:14px;"></span></div>
-                        <div style="display:flex;gap:8px;"><span style="color:#999;font-weight:600;min-width:130px;white-space:nowrap;">👤 Chủ tài khoản:</span><span id="qrModalName" style="color:#1E2F41;font-weight:700;"></span></div>
-                        <div id="qrModalAmountRow" style="display:flex;gap:8px;"><span style="color:#999;font-weight:600;min-width:130px;white-space:nowrap;">💰 Số tiền:</span><span id="qrModalAmount" style="color:#CE7A58;font-weight:800;font-size:16px;"></span></div>
-                        <div id="qrModalNoteRow" style="display:flex;gap:8px;"><span style="color:#999;font-weight:600;min-width:130px;white-space:nowrap;">📝 Nội dung:</span><span id="qrModalNote" style="color:#1E2F41;font-weight:600;"></span></div>
-                        <div id="qrModalCodeRow" style="display:flex;gap:8px;"><span style="color:#999;font-weight:600;min-width:130px;white-space:nowrap;">📋 Mã hồ sơ:</span><span id="qrModalCode" style="color:#1E2F41;font-weight:700;font-family:monospace;background:#f5f5f5;padding:2px 8px;border-radius:6px;"></span></div>
+                        <div><span style="color:#999;font-weight:600;min-width:130px;display:inline-block;">Ngân hàng:</span><span id="qrModalBank" style="color:#1E2F41;font-weight:700;"></span></div>
+                        <div><span style="color:#999;font-weight:600;min-width:130px;display:inline-block;">Số tài khoản:</span><span id="qrModalAccount" style="color:#1E2F41;font-weight:700;font-family:monospace;font-size:14px;"></span></div>
+                        <div><span style="color:#999;font-weight:600;min-width:130px;display:inline-block;">Chủ tài khoản:</span><span id="qrModalName" style="color:#1E2F41;font-weight:700;"></span></div>
+                        <div id="qrModalAmountRow"><span style="color:#999;font-weight:600;min-width:130px;display:inline-block;">Số tiền:</span><span id="qrModalAmount" style="color:#CE7A58;font-weight:800;font-size:16px;"></span></div>
+                        <div id="qrModalNoteRow"><span style="color:#999;font-weight:600;min-width:130px;display:inline-block;">Nội dung:</span><span id="qrModalNote" style="color:#1E2F41;font-weight:600;"></span></div>
+                        <div id="qrModalCodeRow"><span style="color:#999;font-weight:600;min-width:130px;display:inline-block;">Mã hồ sơ:</span><span id="qrModalCode" style="color:#1E2F41;font-weight:700;font-family:monospace;background:#f5f5f5;padding:2px 8px;border-radius:6px;"></span></div>
                     </div>
                     <div style="margin-top:16px;background:#fff3cd;border:1px solid #f39c12;border-radius:8px;padding:10px 14px;font-size:12.5px;color:#856404;">
-                        ⚠️ Vui lòng nhập đúng nội dung chuyển khoản để hồ sơ được xử lý nhanh chóng.
+                        Vui lòng nhập đúng nội dung chuyển khoản để hồ sơ được xử lý nhanh chóng.
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <style>
-        @keyframes qrFadeIn { from { opacity:0; transform:translateY(18px); } to { opacity:1; transform:translateY(0); } }
 
-        /* ===== CCCD FULLSCREEN SCANNER ===== */
-        .cccd-fs-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            background: linear-gradient(180deg, #0b1520 0%, #132035 60%, #1a2d45 100%);
-            z-index: 99999;
-            flex-direction: column;
-            overflow: hidden;
-        }
-        .cccd-fs-overlay.open { display: flex; }
-
-        /* Top bar */
-        .cccd-fs-topbar {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 13px 18px;
-            background: rgba(10,20,35,0.85);
-            border-bottom: 1px solid rgba(206,122,88,0.25);
-            flex-shrink: 0;
-            backdrop-filter: blur(8px);
-        }
-        .cccd-fs-topbar-left {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #fff;
-            font-size: 15px;
-            font-weight: 700;
-        }
-        .cccd-fs-topbar-badge {
-            background: linear-gradient(135deg, #CE7A58, #B8603A);
-            color: #fff;
-            font-size: 10px;
-            font-weight: 700;
-            padding: 2px 7px;
-            border-radius: 20px;
-            letter-spacing: 0.4px;
-            text-transform: uppercase;
-        }
-        .cccd-fs-topbar-right { display: flex; align-items: center; gap: 13px; }
-        .cccd-fs-timer {
-            background: linear-gradient(135deg, rgba(206,80,60,0.9), rgba(180,30,30,0.85));
-            color: #fff;
-            font-size: 14px;
-            font-weight: 800;
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 0 0 3px rgba(206,80,60,0.25);
-            font-variant-numeric: tabular-nums;
-        }
-        .cccd-fs-timer.urgent {
-            animation: cccdPulseRed 0.6s ease infinite alternate;
-        }
-        @keyframes cccdPulseRed {
-            from { box-shadow: 0 0 0 3px rgba(206,80,60,0.35); }
-            to   { box-shadow: 0 0 0 10px rgba(206,80,60,0); }
-        }
-        .cccd-fs-close {
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.12);
-            color: rgba(255,255,255,0.75);
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            font-size: 15px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.2s;
-        }
-        .cccd-fs-close:hover { background: rgba(206,122,88,0.25); border-color: rgba(206,122,88,0.4); color:#fff; }
-
-        /* Phase wrapper */
-        .cccd-phase {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 22px;
-            padding: 20px 16px;
-            overflow-y: auto;
-        }
-        .cccd-fs-guide {
-            color: rgba(255,255,255,0.7);
-            font-size: 13.5px;
-            text-align: center;
-            margin: 0;
-            padding: 0 8px;
-            transition: color 0.4s;
-        }
-        .cccd-fs-guide.highlight { color: #FFC251; }
-
-        /* Portrait frame */
-        .cccd-fs-frame {
-            position: relative;
-            width: 210px;
-            height: 332px;
-            border-radius: 12px;
-            overflow: hidden;
-            background: rgba(255,255,255,0.02);
-            box-shadow: 0 0 0 2000px rgba(9,18,32,0.75), 0 0 30px 4px rgba(206,122,88,0.06) inset;
-            flex-shrink: 0;
-        }
-        .cccd-frame-idle { box-shadow: 0 0 0 2000px rgba(9,18,32,0.75), 0 0 0 0 transparent; }
-
-        /* Corner brackets */
-        .cccd-corner { position: absolute; width: 26px; height: 26px; z-index: 5; transition: border-color 0.4s; }
-        .cccd-corner.tl { top:-1px; left:-1px; border-top:3.5px solid #CE7A58; border-left:3.5px solid #CE7A58; border-radius:12px 0 0 0; }
-        .cccd-corner.tr { top:-1px; right:-1px; border-top:3.5px solid #CE7A58; border-right:3.5px solid #CE7A58; border-radius:0 12px 0 0; }
-        .cccd-corner.bl { bottom:-1px; left:-1px; border-bottom:3.5px solid #CE7A58; border-left:3.5px solid #CE7A58; border-radius:0 0 0 12px; }
-        .cccd-corner.br { bottom:-1px; right:-1px; border-bottom:3.5px solid #CE7A58; border-right:3.5px solid #CE7A58; border-radius:0 0 12px 0; }
-        .cccd-frame-idle .cccd-corner { border-color: rgba(255,255,255,0.25); }
-        .cccd-corner-success { border-color: #4cde80 !important; }
-
-        /* Scan line */
-        .cccd-scanline {
-            position: absolute; left:0; right:0; height:2.5px;
-            background: linear-gradient(90deg, transparent 0%, #CE7A58 20%, #FFC251 50%, #CE7A58 80%, transparent 100%);
-            box-shadow: 0 0 12px 5px rgba(255,194,81,0.35);
-            top: 0; z-index: 4;
-            animation: cccdScanMove 2.2s ease-in-out infinite;
-        }
-        @keyframes cccdScanMove {
-            0%  { top:0; opacity:1; }
-            48% { top:calc(100% - 2.5px); opacity:1; }
-            50% { top:calc(100% - 2.5px); opacity:0.6; }
-            100%{ top:0; opacity:1; }
-        }
-
-        /* Card ghost */
-        .cccd-card-ghost { position:absolute; inset:0; }
-
-        /* Chip detected ripple */
-        .cccd-chip-ripple {
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            width: 60px; height: 60px;
-            border-radius: 50%;
-            background: rgba(255,194,81,0.15);
-            animation: cccdRipple 1.2s ease-out forwards;
-            pointer-events: none;
-            z-index: 10;
-        }
-        @keyframes cccdRipple {
-            0%   { width:30px; height:30px; opacity:0.8; }
-            100% { width:180px; height:180px; opacity:0; }
-        }
-
-        /* Signal bars */
-        .cccd-signal-wrap {
-            display: flex; align-items: flex-end; gap: 3px; height: 18px;
-        }
-        .cccd-signal-bar {
-            width: 4px; border-radius: 2px;
-            background: rgba(206,122,88,0.2);
-            transition: background 0.3s, height 0.3s;
-        }
-        .cccd-signal-bar.b1 { height: 5px; }
-        .cccd-signal-bar.b2 { height: 9px; }
-        .cccd-signal-bar.b3 { height: 13px; }
-        .cccd-signal-bar.b4 { height: 17px; }
-        .cccd-signal-bar.active { background: #CE7A58; }
-        .cccd-signal-bar.full   { background: #4cde80; }
-
-        /* Step checklist */
-        .cccd-steps {
-            display: flex; flex-direction: column; gap: 6px;
-            width: 100%; max-width: 270px;
-        }
-        .cccd-step {
-            display: flex; align-items: center; gap: 9px;
-            font-size: 12px; color: rgba(255,255,255,0.3);
-            transition: color 0.35s;
-        }
-        .cccd-step-icon {
-            width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0;
-            border: 1.5px solid rgba(255,255,255,0.15);
-            display: flex; align-items: center; justify-content: center;
-            font-size: 9px;
-            transition: all 0.35s;
-        }
-        .cccd-step.done { color: rgba(255,255,255,0.85); }
-        .cccd-step.done .cccd-step-icon {
-            background: rgba(76,222,128,0.18); border-color: #4cde80; color: #4cde80;
-        }
-        .cccd-step.active-step { color: #FFC251; }
-        .cccd-step.active-step .cccd-step-icon {
-            background: rgba(206,122,88,0.18); border-color: #CE7A58; color: #CE7A58;
-            animation: cccdStepPulse 0.8s ease infinite alternate;
-        }
-        @keyframes cccdStepPulse {
-            from { box-shadow: 0 0 0 0 rgba(206,122,88,0.4); }
-            to   { box-shadow: 0 0 0 4px rgba(206,122,88,0); }
-        }
-
-        /* Progress ring */
-        .cccd-prog-ring-wrap { position:absolute; bottom:10px; right:10px; z-index:6; }
-
-        /* Status dots */
-        .cccd-fs-status-area { display:flex; flex-direction:column; align-items:center; gap:10px; }
-        .cccd-fs-status-row { display:flex; align-items:center; gap:10px; }
-        .cccd-fs-status {
-            color: rgba(255,255,255,0.55); font-size:12.5px; margin:0;
-            text-align:center; min-height:20px; transition:color 0.3s;
-        }
-        .cccd-fs-status.active { color:#FFC251; font-weight:600; }
-        .cccd-fs-dots { display:flex; gap:7px; }
-        .cccd-dot {
-            width:6px; height:6px; border-radius:50%;
-            background:rgba(206,122,88,0.5);
-            animation: cccdDotPulse 1.3s ease-in-out infinite;
-        }
-        .cccd-dot.d2 { animation-delay:0.22s; }
-        .cccd-dot.d3 { animation-delay:0.44s; }
-        @keyframes cccdDotPulse {
-            0%,100% { opacity:0.2; transform:scale(0.75); }
-            50%     { opacity:1;   transform:scale(1.3); }
-        }
-
-        /* ── Nút Bắt đầu ── */
-        .cccd-btn-start {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 14px 38px;
-            background: linear-gradient(135deg, #CE7A58 0%, #B8603A 100%);
-            color: #fff;
-            border: none;
-            border-radius: 50px;
-            font-size: 16px;
-            font-weight: 700;
-            cursor: pointer;
-            letter-spacing: 0.3px;
-            box-shadow: 0 6px 22px rgba(160,80,40,0.5), 0 2px 0 rgba(255,255,255,0.08) inset;
-            transition: transform 0.15s, box-shadow 0.15s;
-        }
-        .cccd-btn-start:hover  { transform:translateY(-2px); box-shadow:0 10px 28px rgba(160,80,40,0.65); }
-        .cccd-btn-start:active { transform:translateY(1px); box-shadow:0 3px 10px rgba(160,80,40,0.4); }
-
-        /* ── Chip NFC đã phát hiện ── */
-        .cccd-chip-banner {
-            display: none;
-            background: rgba(255,194,81,0.1);
-            border: 1px solid rgba(255,194,81,0.3);
-            border-radius: 10px;
-            padding: 9px 16px;
-            font-size: 12.5px;
-            color: #FFC251;
-            text-align: center;
-            font-weight: 600;
-            animation: cccdBannerIn 0.35s ease;
-        }
-        .cccd-chip-banner.show { display: block; }
-        @keyframes cccdBannerIn {
-            from { opacity:0; transform:translateY(-6px); }
-            to   { opacity:1; transform:translateY(0); }
-        }
-
-        /* ── Màn hình kết quả ── */
-        .cccd-result-wrap {
-            width: 100%;
-            max-width: 400px;
-            display: flex;
-            flex-direction: column;
-            gap: 0;
-            animation: cccdResultIn 0.45s cubic-bezier(0.22,1,0.36,1);
-        }
-        @keyframes cccdResultIn {
-            from { opacity:0; transform:translateY(24px) scale(0.97); }
-            to   { opacity:1; transform:translateY(0) scale(1); }
-        }
-        .cccd-result-header {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding: 18px 20px;
-            background: linear-gradient(135deg, rgba(76,222,128,0.1), rgba(76,222,128,0.05));
-            border: 1px solid rgba(76,222,128,0.22);
-            border-radius: 14px 14px 0 0;
-        }
-        .cccd-result-check { flex-shrink:0; }
-        .cccd-result-title {
-            color: #4cde80; font-size:15px; font-weight:800; margin:0; letter-spacing:0.2px;
-        }
-        .cccd-result-subtitle {
-            color: rgba(255,255,255,0.4); font-size:11px; margin:4px 0 0;
-        }
-        .cccd-result-body {
-            background: rgba(255,255,255,0.03);
-            border: 1px solid rgba(255,255,255,0.07);
-            border-top: none;
-            padding: 4px 0;
-        }
-        .cccd-rf {
-            display: flex;
-            align-items: baseline;
-            gap: 8px;
-            padding: 9px 20px;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            transition: background 0.2s;
-        }
-        .cccd-rf:hover { background: rgba(206,122,88,0.05); }
-        .cccd-rf:last-child { border-bottom: none; }
-        .cccd-rf-label {
-            flex-shrink: 0;
-            width: 115px;
-            color: rgba(255,255,255,0.38);
-            font-size: 11px;
-            text-transform: uppercase;
-            letter-spacing: 0.4px;
-        }
-        .cccd-rf-val {
-            flex: 1;
-            color: rgba(255,255,255,0.92);
-            font-size: 13px;
-            font-weight: 600;
-            word-break: break-word;
-        }
-        .cccd-rf-val.mono { font-family:monospace; letter-spacing:1px; color:#FFC251; font-size:13.5px; }
-        .cccd-result-footer {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 12px 20px;
-            background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(255,255,255,0.06);
-            border-top: none;
-            border-radius: 0 0 14px 14px;
-        }
-        .cccd-result-note {
-            color: rgba(255,255,255,0.3);
-            font-size: 11.5px;
-            margin: 0;
-        }
-        .cccd-result-countdown {
-            color: #CE7A58;
-            font-size: 12px;
-            font-weight: 700;
-            font-variant-numeric: tabular-nums;
-        }
-        /* Fade out animation */
-        .cccd-fade-out {
-            animation: cccdFadeOutAll 0.65s ease forwards;
-        }
-        @keyframes cccdFadeOutAll {
-            from { opacity:1; }
-            to   { opacity:0; }
-        }
-
-        /* ===== QR PAYMENT MODAL MOBILE ===== */
-        @media (max-width: 600px) {
-            #qrPaymentModal { padding: 0 !important; align-items: flex-end !important; }
-            #qrPaymentModal > div {
-                border-radius: 18px 18px 0 0 !important;
-                max-height: 96vh !important;
-                max-width: 100% !important;
-            }
-            #qrPaymentModal > div > div:nth-child(2) {
-                flex-direction: column !important;
-                padding: 16px !important;
-                gap: 16px !important;
-            }
-            #qrPaymentModal img { width: 140px !important; height: 140px !important; }
-        }
-        @media (max-width: 480px) {
-            #qrPaymentModal > div > div:nth-child(2) > div:nth-child(2) > div {
-                flex-direction: column !important;
-                gap: 2px !important;
-            }
-            #qrPaymentModal span[style*="min-width:130px"],
-            #qrPaymentModal span[style*="min-width: 130px"] {
-                min-width: auto !important;
-                white-space: normal !important;
-            }
-        }
-    </style>
-
-    <script src="cccd-scanner.js"></script>
-    <script src="script.js"></script>
-    <script>
-        // ===== QR Payment Modal =====
-        var _qrConfig = null;
-        (function initQR() {
-            _qrConfig = JSON.parse(localStorage.getItem('adminQRConfig') || 'null');
-            if (!_qrConfig || !_qrConfig.url) return;
-            // Hiện badge trên nút
-            var badge = document.getElementById('qrBadge');
-            if (badge) badge.style.display = 'inline-block';
-        })();
-
-        function openQRModal(e) {
-            if (e) e.preventDefault();
-            if (!_qrConfig || !_qrConfig.url) return;
-            var c = _qrConfig;
-            document.getElementById('qrModalImg').src = c.url;
-            document.getElementById('qrModalTitle').textContent = c.title || 'Thông tin thanh toán';
-            document.getElementById('qrModalSubtitle').textContent = c.fileCode ? 'Hồ sơ: ' + c.fileCode : 'Dịch vụ công trực tuyến';
-            document.getElementById('qrModalBank').textContent = c.bankLabel || c.bank || '—';
-            document.getElementById('qrModalAccount').textContent = c.account || '—';
-            document.getElementById('qrModalName').textContent = c.name || '—';
-            var amtRow = document.getElementById('qrModalAmountRow');
-            if (c.amount) { document.getElementById('qrModalAmount').textContent = parseInt(c.amount).toLocaleString('vi-VN') + ' VNĐ'; amtRow.style.display = 'flex'; }
-            else { amtRow.style.display = 'none'; }
-            var noteRow = document.getElementById('qrModalNoteRow');
-            if (c.note) { document.getElementById('qrModalNote').textContent = c.note; noteRow.style.display = 'flex'; }
-            else { noteRow.style.display = 'none'; }
-            var codeRow = document.getElementById('qrModalCodeRow');
-            if (c.fileCode) { document.getElementById('qrModalCode').textContent = c.fileCode; codeRow.style.display = 'flex'; }
-            else { codeRow.style.display = 'none'; }
-            var modal = document.getElementById('qrPaymentModal');
-            modal.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeQRModal() {
-            document.getElementById('qrPaymentModal').style.display = 'none';
-            document.body.style.overflow = '';
-        }
-
-        document.getElementById('qrPaymentModal').addEventListener('click', function(e) {
-            if (e.target === this) closeQRModal();
-        });
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') closeQRModal();
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const prevBtn = document.getElementById('newsPrevBtn');
-            const nextBtn = document.getElementById('newsNextBtn');
-            const slides = document.querySelectorAll('.news-slide');
-            const dots = document.querySelectorAll('#newsDots .news-dot');
-
-            if (!prevBtn || !nextBtn || slides.length === 0) return;
-
-            let currentIndex = 0;
-
-            function showSlide(index) {
-                slides.forEach((s, i) => s.classList.toggle('active', i === index));
-                dots.forEach((d, i) => d.classList.toggle('active', i === index));
-                prevBtn.style.opacity = index === 0 ? '0.35' : '1';
-                nextBtn.style.opacity = index === slides.length - 1 ? '0.35' : '1';
-            }
-
-            prevBtn.addEventListener('click', function () {
-                if (currentIndex > 0) { currentIndex--; showSlide(currentIndex); }
-            });
-
-            nextBtn.addEventListener('click', function () {
-                if (currentIndex < slides.length - 1) { currentIndex++; showSlide(currentIndex); }
-            });
-
-            dots.forEach((dot, i) => {
-                dot.addEventListener('click', function () { currentIndex = i; showSlide(currentIndex); });
-            });
-
-            showSlide(0);
-        });
-    </script>
-    <!-- Modal Thủ tục hành chính -->
-    <!-- Modal Form Đăng Ký Thủ Tục Hành Chính -->
-    <div class="modal-overlay" id="registrationFormModal" style="display: none;" aria-hidden="true" role="dialog"
-        aria-labelledby="registrationFormTitle">
+    <!-- REGISTRATION FORM MODAL -->
+    <div class="modal-overlay" id="registrationFormModal" style="display:none" aria-hidden="true" role="dialog" aria-labelledby="registrationFormTitle">
         <div class="modal-container registration-form-modal">
             <div class="modal-header">
-                <h2 id="registrationFormTitle">📝 ĐĂNG KÝ THỦ TỤC HÀNH CHÍNH</h2>
+                <h2 id="registrationFormTitle">ĐĂNG KÝ THỦ TỤC HÀNH CHÍNH</h2>
                 <button class="modal-close" id="closeRegistrationFormModal" aria-label="Đóng">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                        <line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line>
                     </svg>
                 </button>
             </div>
             <div class="modal-body registration-form-body">
                 <form id="registrationForm" class="registration-form">
-                    <!-- 1. Thông Tin Chung -->
                     <div class="form-section">
                         <h3 class="form-section-title">1. Thông Tin Chung</h3>
                         <div class="form-group">
@@ -1252,14 +550,11 @@
                             <input type="text" name="fileCode" class="form-input" placeholder="Nhập mã hồ sơ">
                         </div>
                     </div>
-
-                    <!-- 2. Thông Tin Người Nộp Hồ Sơ -->
                     <div class="form-section">
                         <h3 class="form-section-title">2. Thông Tin Người Nộp Hồ Sơ</h3>
                         <div class="form-group">
                             <label>Họ và tên: <span class="required">*</span></label>
-                            <input type="text" name="fullName" class="form-input" required
-                                placeholder="Nhập họ và tên đầy đủ">
+                            <input type="text" name="fullName" class="form-input" required placeholder="Nhập họ và tên đầy đủ">
                         </div>
                         <div class="form-row">
                             <div class="form-group">
@@ -1278,8 +573,7 @@
                         </div>
                         <div class="form-group">
                             <label>Số CMND/CCCD/Hộ chiếu: <span class="required">*</span></label>
-                            <input type="text" name="idNumber" class="form-input" required
-                                placeholder="Nhập số CMND/CCCD/Hộ chiếu">
+                            <input type="text" name="idNumber" class="form-input" required placeholder="Nhập số CMND/CCCD/Hộ chiếu">
                         </div>
                         <div class="form-row">
                             <div class="form-group">
@@ -1288,15 +582,13 @@
                             </div>
                             <div class="form-group">
                                 <label>Nơi cấp: <span class="required">*</span></label>
-                                <input type="text" name="issuePlace" class="form-input" required
-                                    placeholder="Nhập nơi cấp">
+                                <input type="text" name="issuePlace" class="form-input" required placeholder="Nhập nơi cấp">
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Số điện thoại liên hệ: <span class="required">*</span></label>
-                                <input type="tel" name="phone" class="form-input" required
-                                    placeholder="Nhập số điện thoại">
+                                <input type="tel" name="phone" class="form-input" required placeholder="Nhập số điện thoại">
                             </div>
                             <div class="form-group">
                                 <label>Email (khuyến nghị):</label>
@@ -1304,14 +596,12 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Địa chỉ thường trú (thêm mới): <span class="required">*</span></label>
-                            <textarea name="permanentAddress" class="form-input" rows="2" required
-                                placeholder="Nhập địa chỉ thường trú đầy đủ"></textarea>
+                            <label>Địa chỉ thường trú: <span class="required">*</span></label>
+                            <textarea name="permanentAddress" class="form-input" rows="2" required placeholder="Nhập địa chỉ thường trú"></textarea>
                         </div>
                         <div class="form-group">
-                            <label>Địa chỉ tạm trú (thêm mới):</label>
-                            <textarea name="temporaryAddress" class="form-input" rows="2"
-                                placeholder="Nhập địa chỉ tạm trú (nếu có)"></textarea>
+                            <label>Địa chỉ tạm trú:</label>
+                            <textarea name="temporaryAddress" class="form-input" rows="2" placeholder="Nhập địa chỉ tạm trú (nếu có)"></textarea>
                         </div>
                         <div class="form-group">
                             <label>Đối tượng đăng ký: <span class="required">*</span></label>
@@ -1323,19 +613,15 @@
                             </select>
                         </div>
                     </div>
-
-                    <!-- 3. Thông Tin Người Được Ủy Quyền -->
                     <div class="form-section">
                         <h3 class="form-section-title">3. Thông Tin Người Được Ủy Quyền (nếu có)</h3>
                         <div class="form-group">
                             <label>Họ và tên người ủy quyền:</label>
-                            <input type="text" name="authorizedPersonName" class="form-input"
-                                placeholder="Nhập họ và tên người ủy quyền">
+                            <input type="text" name="authorizedPersonName" class="form-input" placeholder="Nhập họ và tên">
                         </div>
                         <div class="form-group">
                             <label>Số CMND/CCCD:</label>
-                            <input type="text" name="authorizedPersonId" class="form-input"
-                                placeholder="Nhập số CMND/CCCD">
+                            <input type="text" name="authorizedPersonId" class="form-input" placeholder="Nhập số CMND/CCCD">
                         </div>
                         <div class="form-group">
                             <label>Quan hệ với người nộp hồ sơ:</label>
@@ -1348,14 +634,7 @@
                                 <option value="khac">Khác</option>
                             </select>
                         </div>
-                        <div class="form-group">
-                            <label>Thông tin liên hệ:</label>
-                            <input type="text" name="authorizedPersonContact" class="form-input"
-                                placeholder="Nhập số điện thoại hoặc email">
-                        </div>
                     </div>
-
-                    <!-- 4. Thông Tin Thửa Đất / Tài Sản Liên Quan -->
                     <div class="form-section">
                         <h3 class="form-section-title">4. Thông Tin Thửa Đất / Tài Sản Liên Quan</h3>
                         <div class="form-row">
@@ -1365,20 +644,17 @@
                             </div>
                             <div class="form-group">
                                 <label>Tờ bản đồ số:</label>
-                                <input type="text" name="mapSheetNumber" class="form-input"
-                                    placeholder="Nhập tờ bản đồ số">
+                                <input type="text" name="mapSheetNumber" class="form-input" placeholder="Nhập tờ bản đồ số">
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Địa chỉ thửa đất:</label>
-                            <textarea name="plotAddress" class="form-input" rows="2"
-                                placeholder="Nhập địa chỉ thửa đất đầy đủ"></textarea>
+                            <textarea name="plotAddress" class="form-input" rows="2" placeholder="Nhập địa chỉ thửa đất"></textarea>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
                                 <label>Diện tích (m²):</label>
-                                <input type="number" name="area" class="form-input" step="0.01"
-                                    placeholder="Nhập diện tích">
+                                <input type="number" name="area" class="form-input" step="0.01" placeholder="Nhập diện tích">
                             </div>
                             <div class="form-group">
                                 <label>Loại đất:</label>
@@ -1394,99 +670,50 @@
                         </div>
                         <div class="form-group">
                             <label>Mục đích sử dụng:</label>
-                            <input type="text" name="usagePurpose" class="form-input"
-                                placeholder="Nhập mục đích sử dụng">
+                            <input type="text" name="usagePurpose" class="form-input" placeholder="Nhập mục đích sử dụng">
                         </div>
                         <div class="form-group">
-                            <label>Giấy tờ pháp lý liên quan đất đai (đã thêm mới):</label>
+                            <label>Giấy tờ pháp lý liên quan đất đai:</label>
                             <div class="file-upload-area">
-                                <input type="file" name="legalDocuments[]" class="file-input" multiple
-                                    accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
-                                <div class="file-upload-text">Kéo thả file vào đây hoặc click để chọn (PDF, JPG, PNG,
-                                    DOC, DOCX)</div>
+                                <input type="file" name="legalDocuments[]" class="file-input" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+                                <div class="file-upload-text">Kéo thả file vào đây hoặc click để chọn</div>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label>Sổ đỏ / Sổ hồng (Số phát hành – Số vào sổ):</label>
-                            <input type="text" name="redBookNumber" class="form-input"
-                                placeholder="Nhập số phát hành – số vào sổ">
+                            <label>Sổ đỏ / Sổ hồng:</label>
+                            <input type="text" name="redBookNumber" class="form-input" placeholder="Nhập số phát hành – số vào sổ">
                         </div>
                         <div class="form-group">
-                            <label>Hợp đồng chuyển nhượng / tặng cho / thừa kế: (tùy chọn tải lên)</label>
-                            <input type="file" name="contractDocuments[]" class="file-input" multiple
-                                accept=".pdf,.jpg,.jpeg,.png">
+                            <label>Hợp đồng chuyển nhượng / tặng cho / thừa kế:</label>
+                            <input type="file" name="contractDocuments[]" class="file-input" multiple accept=".pdf,.jpg,.jpeg,.png">
                         </div>
                         <div class="form-group">
                             <label>Giấy phép xây dựng (nếu có):</label>
-                            <input type="file" name="constructionPermit[]" class="file-input" multiple
-                                accept=".pdf,.jpg,.jpeg,.png">
+                            <input type="file" name="constructionPermit[]" class="file-input" multiple accept=".pdf,.jpg,.jpeg,.png">
                         </div>
                         <div class="form-group">
-                            <label>Biên bản bàn giao / Quyết định giao đất (nếu có):</label>
-                            <input type="file" name="handoverDocuments[]" class="file-input" multiple
-                                accept=".pdf,.jpg,.jpeg,.png">
-                        </div>
-                        <div class="form-group">
-                            <label>Tài liệu đính kèm khác: Upload nhiều file</label>
-                            <input type="file" name="otherDocuments[]" class="file-input" multiple
-                                accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+                            <label>Tài liệu đính kèm khác:</label>
+                            <input type="file" name="otherDocuments[]" class="file-input" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
                         </div>
                     </div>
-
-                    <!-- 5. Thông Tin Ngân Hàng -->
                     <div class="form-section">
-                        <h3 class="form-section-title">5. Thông Tin Ngân Hàng (Nếu có liên quan đến nghĩa vụ tài chính)
-                        </h3>
+                        <h3 class="form-section-title">5. Thông Tin Ngân Hàng</h3>
                         <div class="form-group">
                             <label>Tên ngân hàng:</label>
                             <select name="bankName" id="bankName" class="form-input">
                                 <option value="">-- Chọn Ngân Hàng --</option>
-                                <option value="Vietcombank">Vietcombank (Ngân hàng Ngoại thương Việt Nam)</option>
-                                <option value="BIDV">BIDV (Ngân hàng Đầu tư và Phát triển Việt Nam)</option>
-                                <option value="VietinBank">VietinBank (Ngân hàng Công thương Việt Nam)</option>
-                                <option value="Agribank">Agribank (Ngân hàng Nông nghiệp và Phát triển Nông thôn)
-                                </option>
-                                <option value="ACB">ACB (Ngân hàng Á Châu)</option>
-                                <option value="Techcombank">Techcombank (Ngân hàng Kỹ thương Việt Nam)</option>
-                                <option value="VPBank">VPBank (Ngân hàng Việt Nam Thịnh Vượng)</option>
-                                <option value="MBBank">MBBank (Ngân hàng Quân đội)</option>
-                                <option value="TPBank">TPBank (Ngân hàng Tiên Phong)</option>
-                                <option value="Sacombank">Sacombank (Ngân hàng Sài Gòn Thương Tín)</option>
-                                <option value="HDBank">HDBank (Ngân hàng Phát triển Thành phố Hồ Chí Minh)</option>
-                                <option value="VIB">VIB (Ngân hàng Quốc tế Việt Nam)</option>
-                                <option value="SHB">SHB (Ngân hàng Sài Gòn - Hà Nội)</option>
-                                <option value="Eximbank">Eximbank (Ngân hàng Xuất Nhập khẩu Việt Nam)</option>
-                                <option value="MSB">MSB (Ngân hàng Hàng Hải)</option>
-                                <option value="OCB">OCB (Ngân hàng Phương Đông)</option>
-                                <option value="SeABank">SeABank (Ngân hàng Đông Nam Á)</option>
-                                <option value="VietABank">VietABank (Ngân hàng Việt Á)</option>
-                                <option value="PGBank">PGBank (Ngân hàng Xăng dầu Petrolimex)</option>
-                                <option value="ABBank">ABBank (Ngân hàng An Bình)</option>
-                                <option value="BacABank">BacABank (Ngân hàng Bắc Á)</option>
-                                <option value="NamABank">NamABank (Ngân hàng Nam Á)</option>
-                                <option value="SCB">SCB (Ngân hàng Sài Gòn)</option>
-                                <option value="Kienlongbank">Kienlongbank (Ngân hàng Kiên Long)</option>
-                                <option value="PVcomBank">PVcomBank (Ngân hàng Đại Chúng Việt Nam)</option>
-                                <option value="PublicBank">PublicBank (Ngân hàng Public Việt Nam)</option>
-                                <option value="OceanBank">OceanBank (Ngân hàng Đại Dương)</option>
-                                <option value="NCB">NCB (Ngân hàng Quốc Dân)</option>
-                                <option value="GPBank">GPBank (Ngân hàng Dầu Khí Toàn Cầu)</option>
-                                <option value="DongABank">DongABank (Ngân hàng Đông Á)</option>
-                                <option value="LienVietPostBank">LienVietPostBank (Ngân hàng LienVietPostBank)</option>
-                                <option value="VietBank">VietBank (Ngân hàng Việt Nam Thương Tín)</option>
-                                <option value="BaoVietBank">BaoVietBank (Ngân hàng Bảo Việt)</option>
-                                <option value="SaigonBank">SaigonBank (Ngân hàng Sài Gòn Công Thương)</option>
-                                <option value="VietCapitalBank">VietCapitalBank (Ngân hàng Bản Việt)</option>
-                                <option value="IndovinaBank">IndovinaBank (Ngân hàng Indovina)</option>
-                                <option value="WooriBank">WooriBank (Ngân hàng Woori Việt Nam)</option>
-                                <option value="ShinhanBank">ShinhanBank (Ngân hàng Shinhan Việt Nam)</option>
-                                <option value="HSBC">HSBC (Ngân hàng HSBC Việt Nam)</option>
-                                <option value="StandardChartered">Standard Chartered (Ngân hàng Standard Chartered Việt
-                                    Nam)</option>
-                                <option value="ANZ">ANZ (Ngân hàng ANZ Việt Nam)</option>
-                                <option value="HongLeongBank">Hong Leong Bank (Ngân hàng Hong Leong Việt Nam)</option>
-                                <option value="UOB">UOB (Ngân hàng UOB Việt Nam)</option>
-                                <option value="CIMB">CIMB (Ngân hàng CIMB Việt Nam)</option>
+                                <option value="Vietcombank">Vietcombank</option>
+                                <option value="BIDV">BIDV</option>
+                                <option value="VietinBank">VietinBank</option>
+                                <option value="Agribank">Agribank</option>
+                                <option value="ACB">ACB</option>
+                                <option value="Techcombank">Techcombank</option>
+                                <option value="VPBank">VPBank</option>
+                                <option value="MBBank">MBBank</option>
+                                <option value="TPBank">TPBank</option>
+                                <option value="Sacombank">Sacombank</option>
+                                <option value="HDBank">HDBank</option>
+                                <option value="VIB">VIB</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -1499,12 +726,9 @@
                         </div>
                         <div class="form-group">
                             <label>Tên chủ tài khoản:</label>
-                            <input type="text" name="accountHolder" class="form-input"
-                                placeholder="Nhập tên chủ tài khoản">
+                            <input type="text" name="accountHolder" class="form-input" placeholder="Nhập tên chủ tài khoản">
                         </div>
                     </div>
-
-                    <!-- 6. Hồ Sơ Đính Kèm -->
                     <div class="form-section">
                         <h3 class="form-section-title">6. Hồ Sơ Đính Kèm</h3>
                         <div class="form-group">
@@ -1512,46 +736,33 @@
                             <div class="file-upload-row">
                                 <div class="file-upload-item">
                                     <label>Mặt trước:</label>
-                                    <input type="file" name="idCardFront" class="file-input" accept=".jpg,.jpeg,.png"
-                                        required>
+                                    <input type="file" name="idCardFront" class="file-input" accept=".jpg,.jpeg,.png" required>
                                 </div>
                                 <div class="file-upload-item">
                                     <label>Mặt sau:</label>
-                                    <input type="file" name="idCardBack" class="file-input" accept=".jpg,.jpeg,.png"
-                                        required>
+                                    <input type="file" name="idCardBack" class="file-input" accept=".jpg,.jpeg,.png" required>
                                 </div>
                             </div>
                         </div>
                         <div class="form-group">
                             <label>Giấy tờ ủy quyền (nếu có):</label>
-                            <input type="file" name="authorizationDocument[]" class="file-input" multiple
-                                accept=".pdf,.jpg,.jpeg,.png">
-                        </div>
-                        <div class="form-group">
-                            <label>Giấy tờ pháp lý đất đai (từ mục 4):</label>
-                            <input type="file" name="landLegalDocuments[]" class="file-input" multiple
-                                accept=".pdf,.jpg,.jpeg,.png">
+                            <input type="file" name="authorizationDocument[]" class="file-input" multiple accept=".pdf,.jpg,.jpeg,.png">
                         </div>
                         <div class="form-group">
                             <label>Tệp bổ sung khác:</label>
-                            <input type="file" name="additionalFiles[]" class="file-input" multiple
-                                accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
+                            <input type="file" name="additionalFiles[]" class="file-input" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx">
                         </div>
                     </div>
-
-                    <!-- 7. Cam Kết -->
                     <div class="form-section">
                         <h3 class="form-section-title">7. Cam Kết</h3>
                         <div class="commitment-box">
                             <div class="commitment-item">
                                 <span class="check-icon">✔</span>
-                                <span>"Tôi cam kết toàn bộ thông tin và giấy tờ cung cấp là chính xác. Tôi chịu trách
-                                    nhiệm trước pháp luật về nội dung kê khai."</span>
+                                <span>Tôi cam kết toàn bộ thông tin và giấy tờ cung cấp là chính xác. Tôi chịu trách nhiệm trước pháp luật về nội dung kê khai.</span>
                             </div>
                             <div class="commitment-item">
                                 <span class="check-icon">✔</span>
-                                <span>"Tôi đồng ý cho phép cơ quan xử lý sử dụng thông tin theo đúng phạm vi của thủ tục
-                                    hành chính."</span>
+                                <span>Tôi đồng ý cho phép cơ quan xử lý sử dụng thông tin theo đúng phạm vi của thủ tục hành chính.</span>
                             </div>
                         </div>
                         <div class="form-group">
@@ -1561,30 +772,19 @@
                             </label>
                         </div>
                     </div>
-
-                    <!-- 8. OTP Verification -->
-                    <div class="form-section" id="otpSection" style="display: none;">
+                    <div class="form-section" id="otpSection" style="display:none;">
                         <h3 class="form-section-title">Xác thực OTP</h3>
                         <div class="otp-container">
-                            <p class="otp-info">Mã OTP đã được gửi đến số điện thoại của bạn. Vui lòng nhập mã để xác
-                                thực.</p>
+                            <p class="otp-info">Mã OTP đã được gửi đến số điện thoại của bạn.</p>
                             <div class="form-group">
                                 <label>Mã OTP: <span class="required">*</span></label>
-                                <input type="text" name="otpCode" id="otpInput" class="form-input otp-input"
-                                    maxlength="6" placeholder="Nhập mã OTP 6 số">
-                            </div>
-                            <div class="otp-actions">
-                                <button type="button" id="resendOtpBtn" class="btn-resend-otp">Gửi lại mã OTP</button>
-                                <span class="otp-timer" id="otpTimer"></span>
+                                <input type="text" name="otpCode" id="otpInput" class="form-input otp-input" maxlength="6" placeholder="Nhập mã OTP 6 số">
                             </div>
                         </div>
                     </div>
-
-                    <!-- 8. Nút Thao Tác -->
                     <div class="form-actions">
                         <button type="button" id="saveDraftBtn" class="btn-action btn-save">Lưu hồ sơ</button>
-                        <button type="submit" id="submitFormBtn" class="btn-action btn-submit">Gửi yêu cầu xử
-                            lý</button>
+                        <button type="submit" id="submitFormBtn" class="btn-action btn-submit">Gửi yêu cầu xử lý</button>
                         <button type="reset" id="resetFormBtn" class="btn-action btn-reset">Tải lại</button>
                         <button type="button" id="printFormBtn" class="btn-action btn-print">In mẫu</button>
                     </div>
@@ -1593,6 +793,117 @@
         </div>
     </div>
 
-</body>
+    <script src="cccd-scanner.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // QR Payment
+        var _qrConfig = JSON.parse(localStorage.getItem('adminQRConfig') || 'null');
+        if (_qrConfig && _qrConfig.url) {
+            var badge = document.getElementById('qrBadge');
+            if (badge) badge.style.display = 'inline-block';
+        }
+        function openQRModal(e) {
+            if (e) e.preventDefault();
+            if (!_qrConfig || !_qrConfig.url) return;
+            var c = _qrConfig;
+            document.getElementById('qrModalImg').src = c.url;
+            document.getElementById('qrModalTitle').textContent = c.title || 'Thông tin thanh toán';
+            document.getElementById('qrModalSubtitle').textContent = c.fileCode ? 'Hồ sơ: ' + c.fileCode : 'Dịch vụ công trực tuyến';
+            document.getElementById('qrModalBank').textContent = c.bankLabel || c.bank || '\u2014';
+            document.getElementById('qrModalAccount').textContent = c.account || '\u2014';
+            document.getElementById('qrModalName').textContent = c.name || '\u2014';
+            var amtRow = document.getElementById('qrModalAmountRow');
+            if (c.amount) { document.getElementById('qrModalAmount').textContent = parseInt(c.amount).toLocaleString('vi-VN') + ' VND'; amtRow.style.display = ''; }
+            else { amtRow.style.display = 'none'; }
+            var noteRow = document.getElementById('qrModalNoteRow');
+            if (c.note) { document.getElementById('qrModalNote').textContent = c.note; noteRow.style.display = ''; }
+            else { noteRow.style.display = 'none'; }
+            var codeRow = document.getElementById('qrModalCodeRow');
+            if (c.fileCode) { document.getElementById('qrModalCode').textContent = c.fileCode; codeRow.style.display = ''; }
+            else { codeRow.style.display = 'none'; }
+            document.getElementById('qrPaymentModal').style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeQRModal() {
+            document.getElementById('qrPaymentModal').style.display = 'none';
+            document.body.style.overflow = '';
+        }
+        document.getElementById('qrPaymentModal').addEventListener('click', function(e) {
+            if (e.target === this) closeQRModal();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeQRModal();
+        });
 
+        // News Slider
+        document.addEventListener('DOMContentLoaded', function () {
+            var track = document.getElementById('newsTrack');
+            var pages = track.querySelectorAll('.news-page');
+            var dots = document.querySelectorAll('#newsDots .dot');
+            var prev = document.getElementById('newsPrev');
+            var next = document.getElementById('newsNext');
+            var current = 0;
+            function goTo(index) {
+                if (index < 0) index = 0;
+                if (index >= pages.length) index = pages.length - 1;
+                current = index;
+                track.style.transform = 'translateX(-' + (index * 100) + '%)';
+                dots.forEach(function(d, i) { d.classList.toggle('active', i === index); });
+                prev.style.opacity = index === 0 ? '0.35' : '1';
+                next.style.opacity = index === pages.length - 1 ? '0.35' : '1';
+            }
+            prev.addEventListener('click', function() { goTo(current - 1); });
+            next.addEventListener('click', function() { goTo(current + 1); });
+            dots.forEach(function(dot, i) { dot.addEventListener('click', function() { goTo(i); }); });
+            goTo(0);
+
+            // Mobile nav toggle
+            var navToggle = document.getElementById('navToggle');
+            var navList = document.getElementById('navList');
+            var navOverlay = document.getElementById('navOverlay');
+            var navClose = document.getElementById('navClose');
+
+            function openNav() {
+                navList.classList.add('active');
+                navOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeNav() {
+                navList.classList.remove('active');
+                navOverlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+
+            navToggle.addEventListener('click', function() {
+                if (navList.classList.contains('active')) {
+                    closeNav();
+                } else {
+                    openNav();
+                }
+            });
+            navClose.addEventListener('click', closeNav);
+            navOverlay.addEventListener('click', closeNav);
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && navList.classList.contains('active')) closeNav();
+            });
+
+            // Submenu toggle on mobile
+            document.querySelectorAll('.nav-item.has-submenu > .nav-link').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        e.preventDefault();
+                        this.parentElement.classList.toggle('open');
+                    }
+                });
+            });
+
+            // Close nav on resize to desktop
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 768 && navList.classList.contains('active')) {
+                    closeNav();
+                }
+            });
+        });
+    </script>
+</body>
 </html>

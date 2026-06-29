@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Language" content="vi">
+    <title>Đăng ký tài khoản - Cổng Dịch vụ công Quốc gia</title>
+    <link rel="icon" type="image/png" href="https://vpcp.dichvucong.gov.vn/p/home/img/header/quoc_huy.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .register-container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+        .register-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+        .register-header-banner {
+            background: var(--header-gradient);
+            color: #fff;
+            padding: 25px 30px;
+            text-align: center;
+        }
+        .register-header-banner h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .register-header-banner p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .target-tabs {
+            display: flex;
+            background: #f8fafc;
+            border-bottom: 2px solid #e2e8f0;
+        }
+        .target-tab {
+            flex: 1;
+            padding: 16px 20px;
+            text-align: center;
+            font-weight: 600;
+            font-size: 15px;
+            color: #475569;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+        }
+        .target-tab:hover {
+            color: var(--primary-color);
+            background: #f1f5f9;
+        }
+        .target-tab.active {
+            color: var(--primary-color);
+            border-bottom-color: var(--primary-color);
+            background: #fff;
+        }
+        .register-body {
+            padding: 30px;
+        }
+        .section-subtitle {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .section-subtitle i {
+            color: var(--primary-color);
+        }
+        .verify-methods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        .verify-method-card {
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 18px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            background: #fff;
+        }
+        .verify-method-card:hover {
+            border-color: #c5cae9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(26,35,126,0.1);
+        }
+        .verify-method-card.active {
+            border-color: var(--primary-color);
+            background: var(--primary-light);
+        }
+        .method-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--primary-light);
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        .verify-method-card.active .method-icon {
+            background: var(--primary-color);
+            color: #fff;
+        }
+        .method-info h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 3px;
+        }
+        .method-info p {
+            font-size: 12px;
+            color: #64748b;
+        }
+        .reg-form-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 25px;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+        .form-grid.full-width {
+            grid-template-columns: 1fr;
+        }
+        @media (max-width: 768px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .target-tabs {
+                flex-direction: column;
+            }
+            .target-tab {
+                border-bottom: 1px solid #e2e8f0;
+            }
+        }
+        .btn-submit-reg {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 15px;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-submit-reg:hover {
+            background: var(--primary-hover);
+        }
+        .btn-cancel-reg {
+            background: #94a3b8;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 15px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-cancel-reg:hover {
+            background: #64748b;
+        }
+        .captcha-box {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .captcha-code {
+            background: #e2e8f0;
+            padding: 8px 16px;
+            font-family: monospace;
+            font-weight: 700;
+            font-size: 18px;
+            letter-spacing: 4px;
+            color: #1e293b;
+            border-radius: 4px;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== TOP BAR ===== -->
+    <div class="top-bar">
+        <div class="container">
+            <span>Hotline: 18001096</span>
+            <div class="top-bar-links">
+                <a href="#"><i class="fa-regular fa-circle-question"></i> Hỗ trợ</a>
+                <a href="#"><i class="fa-regular fa-envelope"></i> dichvucong@chinhphu.vn</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-left">
+                <a href="index.html" style="text-decoration:none; display:flex; align-items:center;">
+                    <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/header/logo.png" alt="Logo"
+                        class="header-logo"
+                        onerror="this.style.display='none';document.getElementById('logoFallback').style.display='flex'">
+                    <div class="logo-fallback" id="logoFallback">
+                        <svg width="40" height="40" viewBox="0 0 100 100">
+                            <circle cx="50" cy="50" r="48" fill="#19217a" stroke="#FFC251" stroke-width="2"/>
+                            <path d="M 50 12 L 56 35 L 80 35 L 60 48 L 68 72 L 50 58 L 32 72 L 40 48 L 20 35 L 44 35 Z" fill="#FFC251"/>
+                            <rect x="22" y="80" width="56" height="14" fill="#19217a" rx="2" stroke="#FFC251" stroke-width="0.5"/>
+                            <text x="50" y="90" font-size="8" fill="#fff" text-anchor="middle" font-weight="bold">VN</text>
+                        </svg>
+                        <div>
+                            <div class="header-logo-title">CỔNG DỊCH VỤ CÔNG QUỐC GIA</div>
+                            <div class="header-logo-sub">Kết nối, cung cấp thông tin và dịch vụ công mọi lúc, mọi nơi</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="header-right">
+                <a href="index.html" class="btn btn-register"><i class="fa-regular fa-user"></i> Đăng ký</a>
+                <a href="index.html" class="btn btn-login"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- ===== NAV OVERLAY (mobile) ===== -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="nav" id="mainNav">
+        <div class="nav-inner">
+            <ul class="nav-list">
+                <li class="nav-list-header" id="mobileNavHeader">
+                    <span><i class="fa-solid fa-bars"></i> Menu</span>
+                    <button class="nav-close" id="navClose" aria-label="Đóng menu">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                        <i class="fa-solid fa-house"></i>
+                    </a>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="index.html" class="nav-link">
+                        <span>Thông tin và dịch vụ</span>
+                        <i class="fa-solid fa-chevron-down dropdown-arrow"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html"><i class="fa-solid fa-display submenu-icon"></i>Dịch vụ công trực tuyến</a></li>
+                        <li><a href="dang-ky-thu-tuc-nha-dat.html"><i class="fa-solid fa-file-invoice submenu-icon"></i>Thủ tục nhà đất</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- ===== REGISTER CONTENT ===== -->
+    <main class="register-container">
+        <div class="register-card">
+            <div class="register-header-banner">
+                <h1>ĐĂNG KÝ TÀI KHOẢN TẬP TRUNG</h1>
+                <p>Cổng Dịch vụ công Quốc gia - Hệ thống xác thực và định danh điện tử</p>
+            </div>
+
+            <!-- TAB ĐỐI TƯỢNG -->
+            <div class="target-tabs">
+                <div class="target-tab active" onclick="switchTargetTab('cong-dan', this)">
+                    <i class="fa-solid fa-user"></i> CÔNG DÂN
+                </div>
+                <div class="target-tab" onclick="switchTargetTab('doanh-nghiep', this)">
+                    <i class="fa-solid fa-building"></i> DOANH NGHIỆP
+                </div>
+                <div class="target-tab" onclick="switchTargetTab('co-quan-nha-nuoc', this)">
+                    <i class="fa-solid fa-landmark"></i> CƠ QUAN NHÀ NƯỚC
+                </div>
+            </div>
+
+            <div class="register-body">
+                <!-- PHƯƠNG THỨC XÁC MINH -->
+                <div class="section-subtitle">
+                    <i class="fa-solid fa-shield-halved"></i> CHỌN PHƯƠNG THỨC XÁC MINH
+                </div>
+
+                <div class="verify-methods-grid">
+                    <div class="verify-method-card active" onclick="selectVerifyMethod('sim', this)">
+                        <div class="method-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                        <div class="method-info">
+                            <h4>Thuê bao di động</h4>
+                            <p>Xác minh qua Sim chính chủ</p>
+                        </div>
+                    </div>
+                    <div class="verify-method-card" onclick="selectVerifyMethod('bhxh', this)">
+                        <div class="method-icon"><i class="fa-solid fa-id-card"></i></div>
+                        <div class="method-info">
+                            <h4>Mã số BHXH</h4>
+                            <p>Xác minh qua Bảo hiểm xã hội</p>
+                        </div>
+                    </div>
+                    <div class="verify-method-card" onclick="selectVerifyMethod('vneid', this)">
+                        <div class="method-icon"><i class="fa-solid fa-fingerprint"></i></div>
+                        <div class="method-info">
+                            <h4>Tài khoản VNeID</h4>
+                            <p>Định danh điện tử BCT</p>
+                        </div>
+                    </div>
+                    <div class="verify-method-card" onclick="selectVerifyMethod('usb', this)">
+                        <div class="method-icon"><i class="fa-solid fa-key"></i></div>
+                        <div class="method-info">
+                            <h4>USB Ký số</h4>
+                            <p>Dành cho Doanh nghiệp / Chữ ký số</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORM ĐĂNG KÝ KHAI BÁO -->
+                <div class="reg-form-box">
+                    <div class="section-subtitle" style="margin-top:0;">
+                        <i class="fa-solid fa-file-pen"></i> THÔNG TIN KÊ KHAI ĐĂNG KÝ
+                    </div>
+
+                    <form id="accountRegForm" onsubmit="handleAccountRegistration(event)">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Số CMND / CCCD <span style="color:red">*</span></label>
+                                <input type="text" id="regCccd" class="form-input" placeholder="Nhập số CMND/CCCD (9-12 số)" required pattern="[0-9]{9,12}">
+                            </div>
+                            <div class="form-group">
+                                <label>Họ và tên <span style="color:red">*</span></label>
+                                <input type="text" id="regFullName" class="form-input" placeholder="Nhập đầy đủ họ và tên" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Ngày sinh <span style="color:red">*</span></label>
+                                <input type="date" id="regDob" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Số điện thoại chính chủ <span style="color:red">*</span></label>
+                                <input type="tel" id="regPhone" class="form-input" placeholder="Nhập số điện thoại (10-11 số)" required pattern="[0-9]{10,11}">
+                            </div>
+                            <div class="form-group">
+                                <label>Địa chỉ Email <span style="color:red">*</span></label>
+                                <input type="email" id="regEmail" class="form-input" placeholder="example@gmail.com" required>
+                            </div>
+                            <div class="form-group" id="extraFieldGroup">
+                                <label id="extraFieldLabel">Mã BHXH (Nếu có)</label>
+                                <input type="text" id="regExtra" class="form-input" placeholder="Nhập mã số BHXH">
+                            </div>
+                            <div class="form-group">
+                                <label>Mật khẩu <span style="color:red">*</span></label>
+                                <input type="password" id="regPass" class="form-input" placeholder="Nhập mật khẩu an toàn" required minlength="6">
+                            </div>
+                            <div class="form-group">
+                                <label>Xác nhận mật khẩu <span style="color:red">*</span></label>
+                                <input type="password" id="regConfirmPass" class="form-input" placeholder="Nhập lại mật khẩu" required minlength="6">
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="margin-top: 15px;">
+                            <label>Mã xác thực Capcha <span style="color:red">*</span></label>
+                            <div class="captcha-box">
+                                <span class="captcha-code" id="captchaDisplay">8892</span>
+                                <button type="button" class="btn" style="background:#cbd5e1; padding:8px 12px;" onclick="refreshCaptcha()"><i class="fa-solid fa-rotate-right"></i></button>
+                                <input type="text" id="captchaInput" class="form-input" style="max-width:200px;" placeholder="Nhập mã mã xác thực" required>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 25px; display:flex; gap:15px; justify-content: flex-end;">
+                            <a href="index.html" class="btn-cancel-reg"><i class="fa-solid fa-xmark"></i> Hủy bỏ</a>
+                            <button type="submit" class="btn-submit-reg"><i class="fa-solid fa-user-plus"></i> Đăng Ký Tài Khoản</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-col">
+                    <p><strong>Cơ quan chủ quản:</strong> Ủy ban nhân dân thành phố Hà Nội</p>
+                    <p><i class="fa-regular fa-location-dot"></i> Số 79 Đinh Tiên Hoàng, phường Lý Thái Tổ, quận Hoàn Kiếm, TP Hà Nội</p>
+                </div>
+                <div class="footer-col">
+                    <p><strong>vib.it.com</strong></p>
+                    <p><i class="fa-regular fa-phone"></i> <strong>Tổng đài hỗ trợ:</strong> 18001096</p>
+                    <p><i class="fa-regular fa-envelope"></i> <strong>Email:</strong> dichvucong@chinhphu.vn</p>
+                    <div class="footer-links">
+                        <a href="#"><i class="fa-regular fa-circle-question"></i> Hỏi đáp</a>
+                        <a href="#"><i class="fa-regular fa-file-lines"></i> Chính sách bảo mật</a>
+                        <a href="#"><i class="fa-regular fa-book"></i> Hướng dẫn</a>
+                    </div>
+                    <a href="admin.html" class="footer-admin">Quản trị hệ thống</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Cổng Dịch vụ công Quốc gia. Tất cả quyền được bảo lưu.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let currentTarget = 'cong-dan';
+        let currentMethod = 'sim';
+
+        function switchTargetTab(target, element) {
+            document.querySelectorAll('.target-tab').forEach(el => el.classList.remove('active'));
+            element.classList.add('active');
+            currentTarget = target;
+            
+            const extraLabel = document.getElementById('extraFieldLabel');
+            const extraInput = document.getElementById('regExtra');
+            if (target === 'doanh-nghiep') {
+                extraLabel.innerHTML = 'Mã số thuế doanh nghiệp (MST) <span style="color:red">*</span>';
+                extraInput.placeholder = 'Nhập mã số thuế doanh nghiệp';
+                extraInput.required = true;
+            } else if (target === 'co-quan-nha-nuoc') {
+                extraLabel.innerHTML = 'Mã định danh cơ quan <span style="color:red">*</span>';
+                extraInput.placeholder = 'Nhập mã định danh DVCP';
+                extraInput.required = true;
+            } else {
+                extraLabel.innerHTML = 'Mã BHXH (Nếu có)';
+                extraInput.placeholder = 'Nhập mã số BHXH';
+                extraInput.required = false;
+            }
+        }
+
+        function selectVerifyMethod(method, element) {
+            document.querySelectorAll('.verify-method-card').forEach(el => el.classList.remove('active'));
+            element.classList.add('active');
+            currentMethod = method;
+        }
+
+        function refreshCaptcha() {
+            const code = Math.floor(1000 + Math.random() * 9000);
+            document.getElementById('captchaDisplay').innerText = code;
+        }
+
+        function handleAccountRegistration(event) {
+            event.preventDefault();
+            const pass = document.getElementById('regPass').value;
+            const confirmPass = document.getElementById('regConfirmPass').value;
+            const captchaInput = document.getElementById('captchaInput').value;
+            const captchaDisplay = document.getElementById('captchaDisplay').innerText;
+
+            if (pass !== confirmPass) {
+                alert('⚠️ Mật khẩu xác nhận không khớp! Vui lòng kiểm tra lại.');
+                return;
+            }
+
+            if (captchaInput !== captchaDisplay) {
+                alert('⚠️ Mã xác thực Captcha không chính xác!');
+                refreshCaptcha();
+                return;
+            }
+
+            const regData = {
+                target: currentTarget,
+                method: currentMethod,
+                cccd: document.getElementById('regCccd').value,
+                fullName: document.getElementById('regFullName').value,
+                dob: document.getElementById('regDob').value,
+                phone: document.getElementById('regPhone').value,
+                email: document.getElementById('regEmail').value,
+                extra: document.getElementById('regExtra').value,
+                createdAt: new Date().toISOString()
+            };
+
+            let users = JSON.parse(localStorage.getItem('registeredUsers') || '[]');
+            users.push(regData);
+            localStorage.setItem('registeredUsers', JSON.stringify(users));
+
+            alert('🎉 Đăng ký tài khoản thành công! Thông tin đăng ký của bạn đã được ghi nhận vào hệ thống.');
+            window.location.href = 'index.html';
+        }
+
+        document.addEventListener('DOMContentLoaded', refreshCaptcha);
+    </script>
+</body>
+</html>

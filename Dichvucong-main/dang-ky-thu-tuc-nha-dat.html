@@ -1,40 +1,19 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Đăng ký thủ tục nhà đất - Cổng Dịch vụ công quốc gia</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/png" href="https://vpcp.dichvucong.gov.vn/p/home/img/header/quoc_huy.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
     <style>
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Header mobile: logo + back-button cùng 1 hàng */
+        .appointment-section { max-width: 1200px; margin: 30px auto; }
+        .section-card { background: #fff; border-radius: 10px; padding: 25px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid #e9ecef; }
+        .section-card-header { text-align: center; padding: 20px; }
+        .section-card-header h1 { color: #000; font-size: 22px; font-weight: 700; margin: 0; }
+        .appointment-form { margin-top: 24px; }
         @media (max-width: 768px) {
-            .main-header { padding: 8px 0; }
-            .header-content {
-                flex-direction: row !important;
-                flex-wrap: nowrap !important;
-                align-items: center !important;
-                justify-content: space-between !important;
-                gap: 8px !important;
-            }
-            .logo-section { flex: 1; min-width: 0; overflow: hidden; }
-            .logo { max-height: 46px; }
-            .logo-emblem { width: 46px !important; height: 46px !important; }
-            .logo-main-text { font-size: 13px !important; }
-            .logo-tagline { display: none !important; }
-            .header-actions { width: auto !important; flex-shrink: 0; }
-            .btn-login { font-size: 13px !important; padding: 7px 12px !important; white-space: nowrap; }
-
-            /* Form area */
             .appointment-section { margin: 16px auto !important; }
             .section-card { padding: 16px !important; }
             .section-card-header { padding: 14px 16px !important; }
@@ -47,18 +26,10 @@
             .form-row { grid-template-columns: 1fr !important; gap: 0; }
             .file-upload-row { grid-template-columns: 1fr !important; gap: 12px; }
             .file-upload-area { padding: 14px !important; }
-            .form-actions {
-                flex-direction: column !important;
-                gap: 10px !important;
-            }
+            .form-actions { flex-direction: column !important; gap: 10px !important; }
             .btn-action { width: 100% !important; padding: 13px !important; font-size: 15px !important; }
             .otp-input { max-width: 100% !important; font-size: 18px !important; }
-            .otp-actions { flex-direction: column !important; }
-            .btn-resend-otp { width: 100% !important; }
-            .procedure-info { padding: 12px !important; }
-            .commitment-box { padding: 12px !important; }
         }
-
         @media (max-width: 480px) {
             .container { padding: 0 10px !important; }
             .section-card-header h1 { font-size: 16px !important; }
@@ -67,78 +38,83 @@
         }
     </style>
 </head>
-
 <body>
-    <!-- Main Header -->
-    <header class="main-header">
+
+    <!-- ===== TOP BAR ===== -->
+    <div class="top-bar">
         <div class="container">
-            <div class="header-content">
-                <div class="logo-section">
-                    <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/header/logo.png" alt="Logo Cổng Dịch vụ công quốc gia" class="logo"
-                        onerror="this.onerror=null; this.src='logo.png'; this.onerror=function(){this.style.display='none'; this.nextElementSibling.style.display='flex';};"
-                        onload="this.nextElementSibling.style.display='none';">
-                    <div class="logo-placeholder" id="logoPlaceholder">
-                        <div class="logo-emblem">
-                            <svg width="90" height="90" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-                                <defs>
-                                    <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-                                        <stop offset="0%" style="stop-color:#CE7A58;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#B8603A;stop-opacity:1" />
-                                    </linearGradient>
-                                </defs>
-                                <circle cx="50" cy="50" r="48" fill="url(#redGrad)" stroke="#FFD700" stroke-width="2" />
-                                <path
-                                    d="M 50 12 L 56 35 L 80 35 L 60 48 L 68 72 L 50 58 L 32 72 L 40 48 L 20 35 L 44 35 Z"
-                                    fill="#FFD700" stroke="#FFA500" stroke-width="0.5" />
-                                <path d="M 18 45 Q 12 40, 15 35 Q 18 30, 22 35 Q 20 40, 18 45" fill="#FFD700"
-                                    opacity="0.95" />
-                                <path d="M 15 50 Q 10 45, 13 40 Q 16 35, 20 40 Q 18 45, 15 50" fill="#FFD700"
-                                    opacity="0.9" />
-                                <path d="M 82 45 Q 88 40, 85 35 Q 82 30, 78 35 Q 80 40, 82 45" fill="#FFD700"
-                                    opacity="0.95" />
-                                <path d="M 85 50 Q 90 45, 87 40 Q 84 35, 80 40 Q 82 45, 85 50" fill="#FFD700"
-                                    opacity="0.9" />
-                                <circle cx="50" cy="68" r="14" fill="#FFD700" stroke="#FFA500" stroke-width="0.5" />
-                                <circle cx="50" cy="68" r="10" fill="#CE7A58" opacity="0.3" />
-                                <rect x="48" y="54" width="4" height="10" fill="#CE7A58" rx="1" />
-                                <rect x="48" y="72" width="4" height="10" fill="#CE7A58" rx="1" />
-                                <rect x="60" y="66" width="10" height="4" fill="#CE7A58" rx="1" />
-                                <rect x="30" y="66" width="10" height="4" fill="#CE7A58" rx="1" />
-                                <rect x="56" y="60" width="6" height="4" fill="#CE7A58" rx="1"
-                                    transform="rotate(45 59 62)" />
-                                <rect x="38" y="60" width="6" height="4" fill="#CE7A58" rx="1"
-                                    transform="rotate(-45 41 62)" />
-                                <rect x="22" y="80" width="56" height="14" fill="#CE7A58" rx="2" stroke="#FFD700"
-                                    stroke-width="0.5" />
-                                <text x="50" y="90" font-size="8" fill="#FFFFFF" text-anchor="middle" font-weight="bold"
-                                    font-family="Arial, sans-serif">VIỆT NAM</text>
-                            </svg>
-                        </div>
-                        <div class="logo-text-content">
-                            <div class="logo-main-text">
-                                <span class="logo-styled-c">
-                                    <svg width="35" height="35" viewBox="0 0 40 40"
-                                        style="vertical-align: baseline; margin-right: 2px;">
-                                        <path d="M 20 5 Q 5 5, 5 20 Q 5 35, 20 35" stroke="#8B4513" stroke-width="3"
-                                            fill="none" stroke-linecap="round" />
-                                        <path d="M 15 10 L 20 15 L 15 20" stroke="#8B4513" stroke-width="2" fill="none"
-                                            stroke-linecap="round" stroke-linejoin="round" />
-                                        <line x1="8" y1="12" x2="12" y2="12" stroke="#8B4513" stroke-width="1.5" />
-                                        <line x1="8" y1="18" x2="12" y2="18" stroke="#8B4513" stroke-width="1.5" />
-                                        <line x1="8" y1="24" x2="12" y2="24" stroke="#8B4513" stroke-width="1.5" />
-                                    </svg>
-                                </span>ỔNG DỊCH VỤ CÔNG QUỐC GIA
-                            </div>
-                            <div class="logo-tagline">Kết nối, cung cấp thông tin và dịch vụ công mọi lúc, mọi nơi</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="header-actions">
-                    <a href="index.html" class="btn-login">Về trang chủ</a>
-                </div>
+            <span>Hotline: 18001096</span>
+            <div class="top-bar-links">
+                <a href="#"><i class="fa-regular fa-circle-question"></i> Hỗ trợ</a>
+                <a href="#"><i class="fa-regular fa-envelope"></i> dichvucong@chinhphu.vn</a>
             </div>
         </div>
+    </div>
+
+    <!-- ===== HEADER ===== -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-left">
+                <img src="https://vpcp.dichvucong.gov.vn/p/home/theme/img/header/logo.png" alt="Logo"
+                    class="header-logo"
+                    onerror="this.style.display='none';document.getElementById('logoFallback').style.display='flex'">
+                <div class="logo-fallback" id="logoFallback">
+                    <svg width="40" height="40" viewBox="0 0 100 100">
+                        <circle cx="50" cy="50" r="48" fill="#19217a" stroke="#FFC251" stroke-width="2"/>
+                        <path d="M 50 12 L 56 35 L 80 35 L 60 48 L 68 72 L 50 58 L 32 72 L 40 48 L 20 35 L 44 35 Z" fill="#FFC251"/>
+                        <rect x="22" y="80" width="56" height="14" fill="#19217a" rx="2" stroke="#FFC251" stroke-width="0.5"/>
+                        <text x="50" y="90" font-size="8" fill="#fff" text-anchor="middle" font-weight="bold">VN</text>
+                    </svg>
+                    <div>
+                        <div class="header-logo-title">CỔNG DỊCH VỤ CÔNG QUỐC GIA</div>
+                        <div class="header-logo-sub">Kết nối, cung cấp thông tin và dịch vụ công mọi lúc, mọi nơi</div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-right">
+                <a href="dang-ky-tai-khoan.html" class="btn btn-register"><i class="fa-regular fa-user"></i> Đăng ký</a>
+                <a href="#" class="btn btn-login"><i class="fa-solid fa-right-to-bracket"></i> Đăng nhập</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
     </header>
+
+    <!-- ===== NAV OVERLAY (mobile) ===== -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <ul class="nav-list" id="navList">
+                <li class="nav-list-header" id="mobileNavHeader">
+                    <span><i class="fa-solid fa-bars"></i> Menu</span>
+                    <button class="nav-close" id="navClose" aria-label="Đóng menu">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </li>
+                <li class="nav-item nav-item-home">
+                    <a href="index.html" class="nav-link"><i class="fa-solid fa-house"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><span>Thông tin và dịch vụ</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><span>Thanh toán trực tuyến</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><span>Phản ánh kiến nghị</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><span>Đánh giá chất lượng phục vụ</span></a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><span>Hỗ trợ</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <!-- Main Content -->
     <main class="main-content">
@@ -665,7 +641,7 @@
                         <div class="form-actions"
                             style="margin-top: 30px; display: flex; gap: 15px; justify-content: center;">
                             <button type="submit" class="btn btn-primary"
-                                style="min-width: 200px; padding: 15px 30px; font-size: 16px; background-color: #D2691E; border-color: #D2691E; color: #ffffff;">
+                                style="min-width: 200px; padding: 15px 30px; font-size: 16px; background-color: #CE7A58; border-color: #CE7A58; color: #ffffff;">
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                     stroke-width="2"
                                     style="display: inline-block; vertical-align: middle; margin-right: 8px;">
@@ -689,16 +665,28 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="main-footer">
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-info">
-                    <p><strong>Cơ quan chủ quản:</strong> Văn phòng Chính phủ</p>
-                    <p><strong>hoantienve365.com</strong></p>
-                    <p><strong>Tổng đài hỗ trợ:</strong> 18001096</p>
-                    <p><strong>Email:</strong> dichvucong@chinhphu.vn</p>
+            <div class="footer-inner">
+                <div class="footer-col">
+                    <p><strong>Cơ quan chủ quản:</strong> Ủy ban nhân dân thành phố Hà Nội</p>
+                    <p><i class="fa-regular fa-location-dot"></i> Số 79 Đinh Tiên Hoàng, phường Lý Thái Tổ, quận Hoàn Kiếm, TP Hà Nội</p>
                 </div>
+                <div class="footer-col">
+                    <p><strong>vib.it.com</strong></p>
+                    <p><i class="fa-regular fa-phone"></i> <strong>Tổng đài hỗ trợ:</strong> 18001096</p>
+                    <p><i class="fa-regular fa-envelope"></i> <strong>Email:</strong> dichvucong@chinhphu.vn</p>
+                    <div class="footer-links">
+                        <a href="#"><i class="fa-regular fa-circle-question"></i> Hỏi đáp</a>
+                        <a href="#"><i class="fa-regular fa-file-lines"></i> Chính sách bảo mật</a>
+                        <a href="#"><i class="fa-regular fa-book"></i> Hướng dẫn</a>
+                    </div>
+                    <a href="admin.html" class="footer-admin">Quản trị hệ thống</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Cổng Dịch vụ công Quốc gia. Tất cả quyền được bảo lưu.
             </div>
         </div>
     </footer>

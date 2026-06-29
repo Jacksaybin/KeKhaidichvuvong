@@ -1890,7 +1890,7 @@ document.addEventListener('DOMContentLoaded', function () {
     renderAppointments();
     }
     checkBankSyncStatus();
-    initNavigationMenu();
+    initMobileNav();
     initSearchAdvanced();
     initFeaturedServiceButtons();
     initServiceFormModal();
@@ -2321,15 +2321,19 @@ function initSearchAdvanced() {
 }
 
 // Khởi tạo menu điều hướng responsive
-function initNavigationMenu() {
+function initMobileNav() {
     const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
+    const navMenu = document.getElementById('navList') || document.getElementById('navMenu');
     const navOverlay = document.getElementById('navOverlay');
+    const navClose = document.getElementById('navClose');
     const navItems = document.querySelectorAll('.nav-item.has-submenu');
 
     // Hàm đóng menu
     function closeMenu() {
-        if (navToggle) navToggle.classList.remove('active');
+        if (navToggle) {
+            navToggle.classList.remove('active');
+            navToggle.querySelector('i').className = 'fa-solid fa-bars';
+        }
         if (navMenu) navMenu.classList.remove('active');
         if (navOverlay) navOverlay.classList.remove('active');
         document.body.style.overflow = '';
@@ -2338,7 +2342,10 @@ function initNavigationMenu() {
 
     // Hàm mở menu
     function openMenu() {
-        if (navToggle) navToggle.classList.add('active');
+        if (navToggle) {
+            navToggle.classList.add('active');
+            navToggle.querySelector('i').className = 'fa-solid fa-xmark';
+        }
         if (navMenu) navMenu.classList.add('active');
         if (navOverlay) navOverlay.classList.add('active');
         document.body.style.overflow = 'hidden';
@@ -2355,6 +2362,13 @@ function initNavigationMenu() {
                 openMenu();
             }
         });
+
+        // Đóng menu khi click nút close
+        if (navClose) {
+            navClose.addEventListener('click', function () {
+                closeMenu();
+            });
+        }
 
         // Đóng menu khi click vào overlay
         if (navOverlay) {
